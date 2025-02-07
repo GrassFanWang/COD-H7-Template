@@ -1,0 +1,102 @@
+T6FB8 000:002.893   SEGGER J-Link V8.10b Log File
+T6FB8 000:002.971   DLL Compiled: Oct  9 2024 15:05:12
+T6FB8 000:002.975   Logging started @ 2024-12-09 10:28
+T6FB8 000:002.979   Process: D:\STM32Pro\MDK5\Core\UV4\UV4.exe
+T6FB8 000:002.983 - 2.982ms
+T6FB8 000:002.990 JLINK_SetWarnOutHandler(...)
+T6FB8 000:002.993 - 0.004ms
+T6FB8 000:002.998 JLINK_OpenEx(...)
+T6FB8 000:255.586   Firmware: J-Link Pro V4 V12 PLUS Aug compiled 22 2024 12:34:52 
+T6FB8 000:255.999   Firmware: J-Link Pro V4 V12 PLUS Aug compiled 22 2024 12:34:52 
+T6FB8 000:256.147   Decompressing FW timestamp took 88 us
+T6FB8 000:257.198   Hardware: V12.00
+T6FB8 000:257.204   S/N: 601022439
+T6FB8 000:257.209   OEM: SEGGER
+T6FB8 000:257.214   Feature(s): FlashBP, GDB, JFlash, FlashDL, RDI
+T6FB8 000:257.659   Bootloader: (FW returned invalid version)
+T6FB8 000:257.980   USB speed mode: High speed (480 MBit/s)
+T6FB8 000:258.181   TELNET listener socket opened on port 19021
+T6FB8 000:258.252   WEBSRV WEBSRV_Init(): Starting webserver thread(s)
+T6FB8 000:258.298   WEBSRV Failed to put socket into listener state (port 19080)
+T6FB8 000:258.362   WEBSRV Webserver running on local port 19081
+T6FB8 000:258.425   Looking for J-Link GUI Server exe at: D:\STM32Pro\MDK5\Core\ARM\Segger\JLinkGUIServer.exe
+T6FB8 000:258.467   Looking for J-Link GUI Server exe at: D:\Jlink\JLink_V810b\JLinkGUIServer.exe
+T6FB8 000:258.476   Forking J-Link GUI Server: D:\Jlink\JLink_V810b\JLinkGUIServer.exe
+T6FB8 000:265.310   J-Link GUI Server info: "J-Link GUI server V8.10b "
+T6FB8 000:265.572 - 262.569ms returns "O.K."
+T6FB8 000:265.589 JLINK_GetEmuCaps()
+T6FB8 000:265.594 - 0.004ms returns 0xB9FF7BBF
+T6FB8 000:265.602 JLINK_TIF_GetAvailable(...)
+T6FB8 000:265.754 - 0.151ms
+T6FB8 000:265.763 JLINK_SetErrorOutHandler(...)
+T6FB8 000:265.767 - 0.003ms
+T6FB8 000:265.780 JLINK_ExecCommand("ProjectFile = "E:\COD\COD-2025RoboMaster-Balcanced_Infantry\Chassis\COD_H7_Template\MDK-ARM\JLinkSettings.ini"", ...). 
+T6FB8 000:275.182   Ref file found at: D:\STM32Pro\MDK5\Core\ARM\Segger\JLinkDevices.ref
+T6FB8 000:275.268   REF file references invalid XML file: D:\Jlink\JLink_V810b\JLinkDevices.xml
+T6FB8 000:278.750   Device "ARM7" selected.
+T6FB8 000:278.960 - 13.181ms returns 0x00
+T6FB8 000:279.930 JLINK_ExecCommand("Device = STM32H723VGTx", ...). 
+T6FB8 000:280.145   Flash bank @ 0x08000000: SFL: Parsing sectorization info from ELF file
+T6FB8 000:280.150     FlashDevice.SectorInfo[0]: .SectorSize = 0x00020000, .SectorStartAddr = 0x00000000
+T6FB8 000:280.156   FlashBank @0x08000000: Sectorization info from SFL ELF file ignored because sectorization override from DLL / XML file is active.
+T6FB8 000:280.503   Flash bank @ 0x90000000: SFL: Parsing sectorization info from ELF file
+T6FB8 000:280.510     FlashDevice.SectorInfo[0]: .SectorSize = 0x00010000, .SectorStartAddr = 0x00000000
+T6FB8 000:284.513   Device "STM32H723VG" selected.
+T6FB8 000:284.679 - 4.738ms returns 0x00
+T6FB8 000:284.687 JLINK_ExecCommand("DisableConnectionTimeout", ...). 
+T6FB8 000:284.695   ERROR: Unknown command
+T6FB8 000:284.700 - 0.008ms returns 0x01
+T6FB8 000:284.705 JLINK_GetHardwareVersion()
+T6FB8 000:284.710 - 0.003ms returns 120000
+T6FB8 000:284.714 JLINK_GetDLLVersion()
+T6FB8 000:284.718 - 0.003ms returns 81002
+T6FB8 000:284.722 JLINK_GetOEMString(...)
+T6FB8 000:284.727 JLINK_GetFirmwareString(...)
+T6FB8 000:284.730 - 0.003ms
+T6FB8 000:286.926 JLINK_GetDLLVersion()
+T6FB8 000:286.932 - 0.006ms returns 81002
+T6FB8 000:286.936 JLINK_GetCompileDateTime()
+T6FB8 000:286.939 - 0.003ms
+T6FB8 000:287.701 JLINK_GetFirmwareString(...)
+T6FB8 000:287.708 - 0.006ms
+T6FB8 000:288.564 JLINK_GetHardwareVersion()
+T6FB8 000:288.570 - 0.006ms returns 120000
+T6FB8 000:289.277 JLINK_GetSN()
+T6FB8 000:289.283 - 0.005ms returns 601022439
+T6FB8 000:290.016 JLINK_GetOEMString(...)
+T6FB8 000:291.408 JLINK_TIF_Select(JLINKARM_TIF_SWD)
+T6FB8 000:292.182 - 0.773ms returns 0x00
+T6FB8 000:292.192 JLINK_HasError()
+T6FB8 000:292.202 JLINK_SetSpeed(5000)
+T6FB8 000:292.456 - 0.255ms
+T6FB8 000:292.468 JLINK_GetId()
+T6FB8 000:293.597   ConfigTargetSettings() start
+T6FB8 000:293.610    J-Link Script File: Executing ConfigTargetSettings()
+T6FB8 000:294.325   ConfigTargetSettings() end - Took 15us
+T6FB8 000:295.020   InitTarget() start
+T6FB8 000:295.027    J-Link Script File: Executing InitTarget()
+T6FB8 000:297.694   SWD selected. Executing JTAG -> SWD switching sequence.
+T6FB8 000:402.434   Error: Failed to initialized DAP.
+T6FB8 000:404.604   Can not attach to CPU. Trying connect under reset.
+T6FB8 000:457.947   SWD selected. Executing JTAG -> SWD switching sequence.
+T6FB8 000:563.050   Error: Failed to initialized DAP.
+T6FB8 000:566.830   Connecting to CPU via connect under reset failed.
+T6FB8 000:620.107   InitTarget() end - Took 322ms
+T6FB8 000:624.528   Connect failed. Resetting via Reset pin and trying again.
+T6FB8 000:690.000   ConfigTargetSettings() start
+T6FB8 000:690.017    J-Link Script File: Executing ConfigTargetSettings()
+T6FB8 000:693.953   ConfigTargetSettings() end - Took 13us
+T6FB8 000:696.028   InitTarget() start
+T6FB8 000:696.041    J-Link Script File: Executing InitTarget()
+T6FB8 000:701.477   SWD selected. Executing JTAG -> SWD switching sequence.
+T6FB8 000:805.892   Error: Failed to initialized DAP.
+T6FB8 000:809.436   Can not attach to CPU. Trying connect under reset.
+T6FB8 000:862.553   SWD selected. Executing JTAG -> SWD switching sequence.
+T6FB8 000:967.239   Error: Failed to initialized DAP.
+T6FB8 000:969.527   Connecting to CPU via connect under reset failed.
+T6FB8 001:023.203   InitTarget() end - Took 324ms
+T6FB8 001:023.219 - 730.751ms returns 0x00000000
+T6FB8 001:928.137 JLINK_Close()
+T6FB8 001:933.580 - 5.441ms
+T6FB8 001:933.607   
+T6FB8 001:933.611   Closed

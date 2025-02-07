@@ -1,0 +1,82 @@
+*** Using Compiler 'V6.19', folder: 'D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin'
+Build target 'COD_H7_Template'
+../Device/Src/remote_control.c(5): warning: In file included from...../Device/Inc\remote_control.h(202): error: redeclaration of 'KeyBoard_Info' with a different type: 'KeyBoard_Info_Typedef' vs 'Remote_Pressed_Typedef'
+extern KeyBoard_Info_Typedef KeyBoard_Info;
+                             ^
+../Device/Inc\remote_control.h(200): note: previous definition is here
+ Remote_Pressed_Typedef KeyBoard_Info;
+                        ^
+1 error generated.
+compiling remote_control.c...
+../Core/Src/stm32h7xx_it.c(25): warning: In file included from...../Device/Inc\remote_control.h(202): error: redeclaration of 'KeyBoard_Info' with a different type: 'KeyBoard_Info_Typedef' vs 'Remote_Pressed_Typedef'
+extern KeyBoard_Info_Typedef KeyBoard_Info;
+                             ^
+../Device/Inc\remote_control.h(200): note: previous definition is here
+ Remote_Pressed_Typedef KeyBoard_Info;
+                        ^
+1 error generated.
+compiling stm32h7xx_it.c...
+../Core/Src/main.c(37): warning: In file included from...../Device/Inc\remote_control.h(202): error: redeclaration of 'KeyBoard_Info' with a different type: 'KeyBoard_Info_Typedef' vs 'Remote_Pressed_Typedef'
+extern KeyBoard_Info_Typedef KeyBoard_Info;
+                             ^
+../Device/Inc\remote_control.h(200): note: previous definition is here
+ Remote_Pressed_Typedef KeyBoard_Info;
+                        ^
+1 error generated.
+compiling main.c...
+../BSP/Src/bsp_can.c(4): warning: In file included from...../Device/Inc\remote_control.h(202): error: redeclaration of 'KeyBoard_Info' with a different type: 'KeyBoard_Info_Typedef' vs 'Remote_Pressed_Typedef'
+extern KeyBoard_Info_Typedef KeyBoard_Info;
+                             ^
+../Device/Inc\remote_control.h(200): note: previous definition is here
+ Remote_Pressed_Typedef KeyBoard_Info;
+                        ^
+1 error generated.
+compiling bsp_can.c...
+../BSP/Src/bsp_uart.c(3): warning: In file included from...../Device/Inc\remote_control.h(202): error: redeclaration of 'KeyBoard_Info' with a different type: 'KeyBoard_Info_Typedef' vs 'Remote_Pressed_Typedef'
+extern KeyBoard_Info_Typedef KeyBoard_Info;
+                             ^
+../Device/Inc\remote_control.h(200): note: previous definition is here
+ Remote_Pressed_Typedef KeyBoard_Info;
+                        ^
+1 error generated.
+compiling bsp_uart.c...
+../Task/Src/CAN_Task.c(7): warning: In file included from...../Device/Inc\remote_control.h(202): error: redeclaration of 'KeyBoard_Info' with a different type: 'KeyBoard_Info_Typedef' vs 'Remote_Pressed_Typedef'
+extern KeyBoard_Info_Typedef KeyBoard_Info;
+                             ^
+../Device/Inc\remote_control.h(200): note: previous definition is here
+ Remote_Pressed_Typedef KeyBoard_Info;
+                        ^
+1 error generated.
+compiling CAN_Task.c...
+../Task/Src/Control_Task.c(7): warning: In file included from...../Device/Inc\remote_control.h(202): error: redeclaration of 'KeyBoard_Info' with a different type: 'KeyBoard_Info_Typedef' vs 'Remote_Pressed_Typedef'
+extern KeyBoard_Info_Typedef KeyBoard_Info;
+                             ^
+../Device/Inc\remote_control.h(200): note: previous definition is here
+ Remote_Pressed_Typedef KeyBoard_Info;
+                        ^
+../Task/Src/Control_Task.c(240): error: invalid operands to binary expression ('Remote_Pressed_Typedef' and 'int')
+        if(remote_ctrl.key.set.G == 1 && KeyBoard_Info==0){
+                                         ~~~~~~~~~~~~~^ ~
+../Task/Src/Control_Task.c(242): error: no member named 'Situation' in 'Control_Info_Typedef'
+                          if(Control_Info->Situation == CHASSIS_BALANCE) Control_Info->Situation = CHASSIS_WEAK;
+                             ~~~~~~~~~~~~  ^
+../Task/Src/Control_Task.c(242): error: no member named 'Situation' in 'Control_Info_Typedef'
+                          if(Control_Info->Situation == CHASSIS_BALANCE) Control_Info->Situation = CHASSIS_WEAK;
+                                                                         ~~~~~~~~~~~~  ^
+../Task/Src/Control_Task.c(244): error: no member named 'Sliping' in 'Control_Info_Typedef'
+                                Control_Info->Sliping = 0;
+                                ~~~~~~~~~~~~  ^
+../Task/Src/Control_Task.c(245): error: use of undeclared identifier 'G_Flag'
+        G_Flag = 1;
+        ^
+../Task/Src/Control_Task.c(247): error: use of undeclared identifier 'G_Flag'
+                }else if(remote_ctrl.key.set.G == 0) G_Flag = 0;      
+                                                     ^
+../Task/Src/Control_Task.c(439): error: use of undeclared identifier 'p'
+ else Control_Info->Target_Velocity =f_Ramp_Calc(Control_Info->Target_Velocity,remote_ctrl.rc.ch[3]*0.006f,0.0012f);p
+                                                                                                                    ^
+8 errors generated.
+compiling Control_Task.c...
+"COD_H7_Template\COD_H7_Template.axf" - 14 Error(s), 0 Warning(s).
+Target not created.
+Build Time Elapsed:  00:00:01
