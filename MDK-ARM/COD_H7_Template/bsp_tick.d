@@ -1,4 +1,5 @@
-cod_h7_template/bsp_tick.o: ..\BSP\Src\bsp_tick.c ..\BSP\Inc\bsp_tick.h \
+cod_h7_template/bsp_tick.o: ..\USER\BSP\Src\bsp_tick.c \
+  ..\USER\BSP\Inc\bsp_tick.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stdint.h \
   ..\Drivers\CMSIS\Device\ST\STM32H7xx\Include\stm32h7xx.h \
   ..\Drivers\CMSIS\Device\ST\STM32H7xx\Include\stm32h723xx.h \

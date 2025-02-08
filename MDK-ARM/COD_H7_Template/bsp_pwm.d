@@ -1,4 +1,5 @@
-cod_h7_template/bsp_pwm.o: ..\BSP\Src\bsp_pwm.c ..\BSP\Inc\bsp_pwm.h \
+cod_h7_template/bsp_pwm.o: ..\USER\BSP\Src\bsp_pwm.c \
+  ..\USER\BSP\Inc\bsp_pwm.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stdint.h \
   ..\Core\Inc\tim.h ..\Core\Inc\main.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal.h \

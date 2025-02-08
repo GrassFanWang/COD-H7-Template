@@ -1,4 +1,4 @@
-cod_h7_template/ins_task.o: ..\Task\Src\INS_Task.c \
+cod_h7_template/ins_task.o: ..\USER\Task\Src\INS_Task.c \
   ..\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS\cmsis_os.h \
   ..\Middlewares\Third_Party\FreeRTOS\Source\include\FreeRTOS.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stddef.h \
@@ -22,14 +22,14 @@ cod_h7_template/ins_task.o: ..\Task\Src\INS_Task.c \
   ..\Middlewares\Third_Party\FreeRTOS\Source\include\queue.h \
   ..\Middlewares\Third_Party\FreeRTOS\Source\include\semphr.h \
   ..\Middlewares\Third_Party\FreeRTOS\Source\include\event_groups.h \
-  ..\Task\Inc\INS_Task.h ..\Device\Inc\bmi088.h \
-  ..\Device\Inc\bmi088_reg.h \
+  ..\USER\Task\Inc\INS_Task.h ..\USER\Device\Inc\bmi088.h \
+  ..\USER\Device\Inc\bmi088_reg.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stdbool.h \
-  ..\Algorithm\Inc\lpf.h ..\Task\Inc\config.h \
+  ..\USER\Algorithm\Inc\lpf.h ..\USER\Task\Inc\config.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stdlib.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\string.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\math.h \
-  ..\Algorithm\Inc\pid.h ..\Core\Inc\tim.h ..\Core\Inc\main.h \
+  ..\USER\Algorithm\Inc\pid.h ..\Core\Inc\tim.h ..\Core\Inc\main.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal.h \
   ..\Core\Inc\stm32h7xx_hal_conf.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_rcc.h \
@@ -73,8 +73,9 @@ cod_h7_template/ins_task.o: ..\Task\Src\INS_Task.c \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_pcd.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_ll_usb.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_pcd_ex.h \
-  ..\Algorithm\Inc\Quaternion.h ..\Algorithm\Inc\Kalman_Filter.h \
+  ..\USER\Algorithm\Inc\Quaternion.h \
+  ..\USER\Algorithm\Inc\Kalman_Filter.h \
   ..\Middlewares\ST\ARM\DSP\Inc\arm_math.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\float.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\limits.h \
-  ..\BSP\Inc\bsp_pwm.h
+  ..\USER\BSP\Inc\bsp_pwm.h

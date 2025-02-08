@@ -1,5 +1,5 @@
-cod_h7_template/motor.o: ..\Device\Src\Motor.c ..\Device\Inc\Motor.h \
-  ..\Task\Inc\config.h \
+cod_h7_template/motor.o: ..\USER\Device\Src\Motor.c \
+  ..\USER\Device\Inc\Motor.h ..\USER\Task\Inc\config.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stdint.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stdbool.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stdlib.h \
@@ -14,7 +14,7 @@ cod_h7_template/motor.o: ..\Device\Src\Motor.c ..\Device\Inc\Motor.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
   ..\Drivers\CMSIS\Include\mpu_armv7.h \
   ..\Drivers\CMSIS\Device\ST\STM32H7xx\Include\system_stm32h7xx.h \
-  ..\BSP\Inc\bsp_can.h \
+  ..\USER\BSP\Inc\bsp_can.h \
   ..\Drivers\CMSIS\Device\ST\STM32H7xx\Include\stm32h7xx.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal.h \
   ..\Core\Inc\stm32h7xx_hal_conf.h \

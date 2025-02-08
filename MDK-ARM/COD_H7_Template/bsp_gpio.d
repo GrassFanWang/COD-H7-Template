@@ -1,5 +1,6 @@
-cod_h7_template/bsp_gpio.o: ..\BSP\Src\bsp_gpio.c ..\BSP\Inc\bsp_gpio.h \
-  ..\Core\Inc\main.h ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal.h \
+cod_h7_template/bsp_gpio.o: ..\USER\BSP\Src\bsp_gpio.c \
+  ..\USER\BSP\Inc\bsp_gpio.h ..\Core\Inc\main.h \
+  ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal.h \
   ..\Core\Inc\stm32h7xx_hal_conf.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_rcc.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_def.h \

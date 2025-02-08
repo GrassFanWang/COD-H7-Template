@@ -1,4 +1,4 @@
-cod_h7_template/bsp_can.o: ..\BSP\Src\bsp_can.c ..\Core\Inc\fdcan.h \
+cod_h7_template/bsp_can.o: ..\USER\BSP\Src\bsp_can.c ..\Core\Inc\fdcan.h \
   ..\Core\Inc\main.h ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal.h \
   ..\Core\Inc\stm32h7xx_hal_conf.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_rcc.h \
@@ -45,9 +45,10 @@ cod_h7_template/bsp_can.o: ..\BSP\Src\bsp_can.c ..\Core\Inc\fdcan.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_pcd.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_ll_usb.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_pcd_ex.h \
-  ..\BSP\Inc\bsp_can.h ..\Device\Inc\Motor.h ..\Task\Inc\config.h \
+  ..\USER\BSP\Inc\bsp_can.h ..\USER\Device\Inc\Motor.h \
+  ..\USER\Task\Inc\config.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stdbool.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stdlib.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\string.h \
-  ..\Device\Inc\Remote_Control.h \
+  ..\USER\Device\Inc\Remote_Control.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stdio.h

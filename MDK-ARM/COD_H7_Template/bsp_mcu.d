@@ -1,6 +1,7 @@
-cod_h7_template/bsp_mcu.o: ..\BSP\Src\bsp_mcu.c ..\BSP\Inc\bsp_mcu.h \
+cod_h7_template/bsp_mcu.o: ..\USER\BSP\Src\bsp_mcu.c \
+  ..\USER\BSP\Inc\bsp_mcu.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stdint.h \
-  ..\BSP\Inc\bsp_gpio.h ..\BSP\Inc\bsp_can.h \
+  ..\USER\BSP\Inc\bsp_gpio.h ..\USER\BSP\Inc\bsp_can.h \
   ..\Drivers\CMSIS\Device\ST\STM32H7xx\Include\stm32h7xx.h \
   ..\Drivers\CMSIS\Device\ST\STM32H7xx\Include\stm32h723xx.h \
   ..\Drivers\CMSIS\Include\core_cm7.h \
@@ -46,9 +47,9 @@ cod_h7_template/bsp_mcu.o: ..\BSP\Src\bsp_mcu.c ..\BSP\Inc\bsp_mcu.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_pcd.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_ll_usb.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_pcd_ex.h \
-  ..\BSP\Inc\bsp_pwm.h ..\Core\Inc\tim.h ..\Core\Inc\main.h \
-  ..\BSP\Inc\bsp_uart.h ..\BSP\Inc\bsp_adc.h ..\Core\Inc\adc.h \
-  ..\Device\Inc\bmi088.h ..\Device\Inc\bmi088_reg.h \
+  ..\USER\BSP\Inc\bsp_pwm.h ..\Core\Inc\tim.h ..\Core\Inc\main.h \
+  ..\USER\BSP\Inc\bsp_uart.h ..\USER\BSP\Inc\bsp_adc.h ..\Core\Inc\adc.h \
+  ..\USER\Device\Inc\bmi088.h ..\USER\Device\Inc\bmi088_reg.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stdbool.h \
   ..\USB_DEVICE\App\usb_device.h \
   ..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_def.h \

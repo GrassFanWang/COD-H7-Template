@@ -341,7 +341,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32H723xx,ARM_MATH_CM7,__FPU_PRESENT=1U,ARM_MATH_CHECK</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32H7xx_HAL_Driver/Inc;../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32H7xx/Include;../Drivers/CMSIS/Include;../BSP/Inc;../Task/Inc;../Device/Inc;../Algorithm/Inc;../Middlewares/ST/ARM/DSP/Inc;../API/Inc;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;../SystemView/SEGGER;../SystemView/Sample/FreeRTOSV10;../SystemView/Config;../SystemView/SEGGER/Syscalls;../SystemView/Sample/FreeRTOSV10/Patch;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;../USB_DEVICE/App;../USB_DEVICE/Target;../Middlewares/ST/STM32_USB_Device_Library/Core/Inc;../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32H7xx_HAL_Driver/Inc;../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32H7xx/Include;../Drivers/CMSIS/Include;../Middlewares/ST/ARM/DSP/Inc;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;../SystemView/SEGGER;../SystemView/Sample/FreeRTOSV10;../SystemView/Config;../SystemView/SEGGER/Syscalls;../SystemView/Sample/FreeRTOSV10/Patch;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;../USB_DEVICE/App;../USB_DEVICE/Target;../Middlewares/ST/STM32_USB_Device_Library/Core/Inc;../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc;..\USER\Task\Inc;..\USER\Device\Inc;..\USER\BSP\Inc;..\USER\Algorithm\Inc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -383,7 +383,7 @@
       </TargetOption>
       <Groups>
         <Group>
-          <GroupName>Task</GroupName>
+          <GroupName>User/Task</GroupName>
           <GroupOption>
             <CommonProperty>
               <UseCPPCompiler>0</UseCPPCompiler>
@@ -457,32 +457,32 @@
             <File>
               <FileName>INS_Task.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Task\Src\INS_Task.c</FilePath>
+              <FilePath>..\USER\Task\Src\INS_Task.c</FilePath>
             </File>
             <File>
               <FileName>Control_Task.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Task\Src\Control_Task.c</FilePath>
+              <FilePath>..\USER\Task\Src\Control_Task.c</FilePath>
             </File>
             <File>
               <FileName>CAN_Task.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Task\Src\CAN_Task.c</FilePath>
+              <FilePath>..\USER\Task\Src\CAN_Task.c</FilePath>
             </File>
             <File>
               <FileName>Detect_Task.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Task\Src\Detect_Task.c</FilePath>
+              <FilePath>..\USER\Task\Src\Detect_Task.c</FilePath>
             </File>
             <File>
               <FileName>Config.h</FileName>
               <FileType>5</FileType>
-              <FilePath>..\Task\Inc\Config.h</FilePath>
+              <FilePath>..\USER\Task\Inc\Config.h</FilePath>
             </File>
           </Files>
         </Group>
         <Group>
-          <GroupName>Device</GroupName>
+          <GroupName>User/Device</GroupName>
           <GroupOption>
             <CommonProperty>
               <UseCPPCompiler>0</UseCPPCompiler>
@@ -556,37 +556,37 @@
             <File>
               <FileName>Motor.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Device\Src\Motor.c</FilePath>
+              <FilePath>..\USER\Device\Src\Motor.c</FilePath>
             </File>
             <File>
               <FileName>Remote_Control.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Device\Src\Remote_Control.c</FilePath>
+              <FilePath>..\USER\Device\Src\Remote_Control.c</FilePath>
             </File>
             <File>
               <FileName>Referee_System.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Device\Src\Referee_System.c</FilePath>
-            </File>
-            <File>
-              <FileName>Bmi088.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Device\Src\Bmi088.c</FilePath>
-            </File>
-            <File>
-              <FileName>Bmi088_Reg.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\Device\Inc\Bmi088_Reg.h</FilePath>
+              <FilePath>..\USER\Device\Src\Referee_System.c</FilePath>
             </File>
             <File>
               <FileName>MiniPC.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Device\Src\MiniPC.c</FilePath>
+              <FilePath>..\USER\Device\Src\MiniPC.c</FilePath>
+            </File>
+            <File>
+              <FileName>Bmi088.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\USER\Device\Src\Bmi088.c</FilePath>
+            </File>
+            <File>
+              <FileName>Bmi088_Reg.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\USER\Device\Inc\Bmi088_Reg.h</FilePath>
             </File>
           </Files>
         </Group>
         <Group>
-          <GroupName>Bsp</GroupName>
+          <GroupName>User/Bsp</GroupName>
           <GroupOption>
             <CommonProperty>
               <UseCPPCompiler>0</UseCPPCompiler>
@@ -658,49 +658,49 @@
           </GroupOption>
           <Files>
             <File>
-              <FileName>bsp_can.c</FileName>
+              <FileName>bsp_adc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\BSP\Src\bsp_can.c</FilePath>
+              <FilePath>..\USER\BSP\Src\bsp_adc.c</FilePath>
             </File>
             <File>
-              <FileName>bsp_uart.c</FileName>
+              <FileName>bsp_can.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\BSP\Src\bsp_uart.c</FilePath>
+              <FilePath>..\USER\BSP\Src\bsp_can.c</FilePath>
             </File>
             <File>
               <FileName>bsp_gpio.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\BSP\Src\bsp_gpio.c</FilePath>
-            </File>
-            <File>
-              <FileName>bsp_tick.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\BSP\Src\bsp_tick.c</FilePath>
-            </File>
-            <File>
-              <FileName>bsp_spi.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\BSP\Src\bsp_spi.c</FilePath>
-            </File>
-            <File>
-              <FileName>bsp_pwm.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\BSP\Src\bsp_pwm.c</FilePath>
-            </File>
-            <File>
-              <FileName>bsp_adc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\BSP\Src\bsp_adc.c</FilePath>
+              <FilePath>..\USER\BSP\Src\bsp_gpio.c</FilePath>
             </File>
             <File>
               <FileName>bsp_mcu.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\BSP\Src\bsp_mcu.c</FilePath>
+              <FilePath>..\USER\BSP\Src\bsp_mcu.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_pwm.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\USER\BSP\Src\bsp_pwm.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_spi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\USER\BSP\Src\bsp_spi.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_tick.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\USER\BSP\Src\bsp_tick.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_uart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\USER\BSP\Src\bsp_uart.c</FilePath>
             </File>
           </Files>
         </Group>
         <Group>
-          <GroupName>Algorithm</GroupName>
+          <GroupName>User/Algorithm</GroupName>
           <GroupOption>
             <CommonProperty>
               <UseCPPCompiler>0</UseCPPCompiler>
@@ -772,39 +772,39 @@
           </GroupOption>
           <Files>
             <File>
+              <FileName>CRC.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\USER\Algorithm\Src\CRC.c</FilePath>
+            </File>
+            <File>
               <FileName>Kalman_Filter.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Algorithm\Src\Kalman_Filter.c</FilePath>
-            </File>
-            <File>
-              <FileName>Quaternion.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Algorithm\Src\Quaternion.c</FilePath>
-            </File>
-            <File>
-              <FileName>PID.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Algorithm\Src\PID.c</FilePath>
+              <FilePath>..\USER\Algorithm\Src\Kalman_Filter.c</FilePath>
             </File>
             <File>
               <FileName>LPF.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Algorithm\Src\LPF.c</FilePath>
+              <FilePath>..\USER\Algorithm\Src\LPF.c</FilePath>
+            </File>
+            <File>
+              <FileName>PID.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\USER\Algorithm\Src\PID.c</FilePath>
+            </File>
+            <File>
+              <FileName>Quaternion.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\USER\Algorithm\Src\Quaternion.c</FilePath>
             </File>
             <File>
               <FileName>Ramp.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Algorithm\Src\Ramp.c</FilePath>
-            </File>
-            <File>
-              <FileName>CRC.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Algorithm\Src\CRC.c</FilePath>
+              <FilePath>..\USER\Algorithm\Src\Ramp.c</FilePath>
             </File>
             <File>
               <FileName>RLS.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Algorithm\Src\RLS.c</FilePath>
+              <FilePath>..\USER\Algorithm\Src\RLS.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -2458,7 +2458,7 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>SystemView</GroupName>
+          <GroupName>User/SystemView</GroupName>
           <Files>
             <File>
               <FileName>SEGGER_RTT.c</FileName>

@@ -1,5 +1,5 @@
-cod_h7_template/control_task.o: ..\Task\Src\Control_Task.c \
-  ..\Task\Inc\Control_Task.h \
+cod_h7_template/control_task.o: ..\USER\Task\Src\Control_Task.c \
+  ..\USER\Task\Inc\Control_Task.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stdint.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stdbool.h \
   ..\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS\cmsis_os.h \
@@ -24,7 +24,7 @@ cod_h7_template/control_task.o: ..\Task\Src\Control_Task.c \
   ..\Middlewares\Third_Party\FreeRTOS\Source\include\queue.h \
   ..\Middlewares\Third_Party\FreeRTOS\Source\include\semphr.h \
   ..\Middlewares\Third_Party\FreeRTOS\Source\include\event_groups.h \
-  ..\BSP\Inc\bsp_uart.h \
+  ..\USER\BSP\Inc\bsp_uart.h \
   ..\Drivers\CMSIS\Device\ST\STM32H7xx\Include\stm32h7xx.h \
   ..\Drivers\CMSIS\Device\ST\STM32H7xx\Include\stm32h723xx.h \
   ..\Drivers\CMSIS\Include\core_cm7.h \
@@ -69,9 +69,10 @@ cod_h7_template/control_task.o: ..\Task\Src\Control_Task.c \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_pcd.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_ll_usb.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_pcd_ex.h \
-  ..\Device\Inc\Remote_Control.h \
+  ..\USER\Device\Inc\Remote_Control.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stdlib.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\string.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stdio.h \
-  ..\Algorithm\Inc\PID.h ..\Task\Inc\config.h ..\Algorithm\Inc\lpf.h \
-  ..\Device\Inc\Motor.h ..\BSP\Inc\bsp_can.h
+  ..\USER\Algorithm\Inc\PID.h ..\USER\Task\Inc\config.h \
+  ..\USER\Algorithm\Inc\lpf.h ..\USER\Device\Inc\Motor.h \
+  ..\USER\BSP\Inc\bsp_can.h
