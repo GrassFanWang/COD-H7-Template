@@ -1,5 +1,5 @@
-cod_h7_template/rls.o: ..\USER\Algorithm\Src\RLS.c \
-  ..\USER\Algorithm\Inc\RLS.h ..\USER\Task\Inc\Config.h \
+cod_h7_template/rls.o: ..\Components\Algorithm\Src\RLS.c \
+  ..\Components\Algorithm\Inc\RLS.h ..\Application\Task\Inc\Config.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stdint.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stdbool.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stdlib.h \

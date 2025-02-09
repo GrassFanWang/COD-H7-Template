@@ -1,5 +1,4 @@
-cod_h7_template/bsp_uart.o: ..\USER\BSP\Src\bsp_uart.c \
-  ..\USER\BSP\Inc\bsp_uart.h \
+cod_h7_template/bsp_uart.o: ..\BSP\Src\bsp_uart.c ..\BSP\Inc\bsp_uart.h \
   ..\Drivers\CMSIS\Device\ST\STM32H7xx\Include\stm32h7xx.h \
   ..\Drivers\CMSIS\Device\ST\STM32H7xx\Include\stm32h723xx.h \
   ..\Drivers\CMSIS\Include\core_cm7.h \
@@ -47,9 +46,9 @@ cod_h7_template/bsp_uart.o: ..\USER\BSP\Src\bsp_uart.c \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_ll_usb.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_pcd_ex.h \
   ..\Core\Inc\usart.h ..\Core\Inc\main.h \
-  ..\USER\Device\Inc\remote_control.h \
+  ..\Components\Device\Inc\remote_control.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stdbool.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stdlib.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\string.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stdio.h \
-  ..\USER\Device\Inc\Referee_System.h
+  ..\Components\Device\Inc\Referee_System.h

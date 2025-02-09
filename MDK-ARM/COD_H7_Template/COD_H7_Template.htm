@@ -3,7 +3,7 @@
 <title>Static Call Graph - [COD_H7_Template\COD_H7_Template.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image COD_H7_Template\COD_H7_Template.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6190004: Last Updated: Sat Feb  8 13:46:31 2025
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6190004: Last Updated: Sun Feb  9 09:13:51 2025
 <BR><P>
 <H3>Maximum Stack Usage =        692 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1603,8 +1603,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_SetConfig
 </UL>
-<BR>[Called By]<UL><LI><a href="#[210]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit_DMA
-<LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_Start_DMA
+<BR>[Called By]<UL><LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ADC_Start_DMA
+<LI><a href="#[210]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit_DMA
 </UL>
 
 <P><STRONG><a name="[164]"></a>HAL_Delay</STRONG> (Thumb, 66 bytes, Stack size 24 bytes, stm32h7xx_hal.o(.text.HAL_Delay))
@@ -2687,7 +2687,7 @@ Global Symbols
 <LI><a href="#[23b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_UART5_Init
 </UL>
 
-<P><STRONG><a name="[1db]"></a>HAL_UART_MspInit</STRONG> (Thumb, 2074 bytes, Stack size 400 bytes, usart.o(.text.HAL_UART_MspInit))
+<P><STRONG><a name="[1db]"></a>HAL_UART_MspInit</STRONG> (Thumb, 2082 bytes, Stack size 400 bytes, usart.o(.text.HAL_UART_MspInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 544 + Unknown Stack Size
 <LI>Call Chain = HAL_UART_MspInit &rArr; HAL_RCCEx_PeriphCLKConfig &rArr; RCCEx_PLL3_Config
 </UL>
@@ -2804,11 +2804,11 @@ Global Symbols
 <LI>Call Chain = MCU_Init &rArr; MX_USB_DEVICE_Init &rArr; USBD_Init &rArr; USBD_LL_Init &rArr; HAL_PCD_Init &rArr; HAL_PCD_MspInit &rArr; HAL_RCCEx_PeriphCLKConfig &rArr; RCCEx_PLL3_Config
 </UL>
 <BR>[Calls]<UL><LI><a href="#[229]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USB_DEVICE_Init
-<LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_USART_Init
 <LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_PWM_Init
 <LI><a href="#[228]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_GPIO_Init
-<LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_FDCAN_Init
 <LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_ADC_Init
+<LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_USART_Init
+<LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_FDCAN_Init
 <LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BMI088_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -2978,7 +2978,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[240]"></a>MX_USART2_UART_Init</STRONG> (Thumb, 154 bytes, Stack size 16 bytes, usart.o(.text.MX_USART2_UART_Init))
+<P><STRONG><a name="[240]"></a>MX_USART2_UART_Init</STRONG> (Thumb, 150 bytes, Stack size 16 bytes, usart.o(.text.MX_USART2_UART_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 592 + Unknown Stack Size
 <LI>Call Chain = MX_USART2_UART_Init &rArr; HAL_RS485Ex_Init &rArr; HAL_UART_MspInit &rArr; HAL_RCCEx_PeriphCLKConfig &rArr; RCCEx_PLL3_Config
 </UL>
@@ -2991,7 +2991,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[241]"></a>MX_USART3_UART_Init</STRONG> (Thumb, 154 bytes, Stack size 16 bytes, usart.o(.text.MX_USART3_UART_Init))
+<P><STRONG><a name="[241]"></a>MX_USART3_UART_Init</STRONG> (Thumb, 150 bytes, Stack size 16 bytes, usart.o(.text.MX_USART3_UART_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 592 + Unknown Stack Size
 <LI>Call Chain = MX_USART3_UART_Init &rArr; HAL_RS485Ex_Init &rArr; HAL_UART_MspInit &rArr; HAL_RCCEx_PeriphCLKConfig &rArr; RCCEx_PLL3_Config
 </UL>
@@ -3040,8 +3040,8 @@ Global Symbols
 <P><STRONG><a name="[10d]"></a>PID_Calculate</STRONG> (Thumb, 780 bytes, Stack size 24 bytes, pid.o(.text.PID_Calculate))
 <BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = PID_Calculate &rArr; PID_ErrorHandle &rArr; __ARM_isinff
 </UL>
-<BR>[Calls]<UL><LI><a href="#[247]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PID_ErrorHandle
-<LI><a href="#[248]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LowPassFilter1p_Update
+<BR>[Calls]<UL><LI><a href="#[248]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LowPassFilter1p_Update
+<LI><a href="#[247]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PID_ErrorHandle
 </UL>
 <BR>[Called By]<UL><LI><a href="#[126]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Control_Info_Update
 <LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BMI088_Temp_Control
@@ -3411,7 +3411,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32h723xx.o(RESET)
 </UL>
-<P><STRONG><a name="[27c]"></a>SystemClock_Config</STRONG> (Thumb, 216 bytes, Stack size 128 bytes, main.o(.text.SystemClock_Config))
+<P><STRONG><a name="[27c]"></a>SystemClock_Config</STRONG> (Thumb, 218 bytes, Stack size 128 bytes, main.o(.text.SystemClock_Config))
 <BR><BR>[Stack]<UL><LI>Max Depth = 296 + Unknown Stack Size
 <LI>Call Chain = SystemClock_Config &rArr; HAL_RCC_ClockConfig &rArr; HAL_InitTick &rArr; HAL_RCC_GetPCLK1Freq &rArr; HAL_RCC_GetHCLKFreq &rArr; HAL_RCC_GetSysClockFreq
 </UL>
@@ -4928,14 +4928,6 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_FDCAN_RxFifo1Callback
 </UL>
 
-<P><STRONG><a name="[132]"></a>HaL_Tick</STRONG> (Thumb, 48 bytes, Stack size 24 bytes, bsp_tick.o(.text.HaL_Tick))
-<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = HaL_Tick
-</UL>
-<BR>[Calls]<UL><LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
-</UL>
-<BR>[Called By]<UL><LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay_us
-</UL>
-
 <P><STRONG><a name="[11c]"></a>USART_RxDMA_MultiBuffer_Init</STRONG> (Thumb, 904 bytes, Stack size 16 bytes, bsp_uart.o(.text.USART_RxDMA_MultiBuffer_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = USART_RxDMA_MultiBuffer_Init
 </UL>
@@ -4958,6 +4950,47 @@ Local Symbols
 <LI><a href="#[2b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 </UL>
 <BR>[Called By]<UL><LI><a href="#[202]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UARTEx_RxEventCallback
+</UL>
+
+<P><STRONG><a name="[132]"></a>HaL_Tick</STRONG> (Thumb, 48 bytes, Stack size 24 bytes, bsp_tick.o(.text.HaL_Tick))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = HaL_Tick
+</UL>
+<BR>[Calls]<UL><LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
+</UL>
+<BR>[Called By]<UL><LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay_us
+</UL>
+
+<P><STRONG><a name="[b3]"></a>PID_Calc_Clear</STRONG> (Thumb, 38 bytes, Stack size 4 bytes, pid.o(.text.PID_Calc_Clear))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = PID_Calc_Clear
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> pid.o(.text.PID_Init)
+</UL>
+<P><STRONG><a name="[b4]"></a>PID_Param_Init</STRONG> (Thumb, 164 bytes, Stack size 24 bytes, pid.o(.text.PID_Param_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = PID_Param_Init &rArr; LowPassFilter1p_Init
+</UL>
+<BR>[Calls]<UL><LI><a href="#[24b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LowPassFilter1p_Init
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> pid.o(.text.PID_Init)
+</UL>
+<P><STRONG><a name="[247]"></a>PID_ErrorHandle</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, pid.o(.text.PID_ErrorHandle))
+<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = PID_ErrorHandle &rArr; __ARM_isinff
+</UL>
+<BR>[Calls]<UL><LI><a href="#[24a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_isinff
+<LI><a href="#[249]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_isnanf
+</UL>
+<BR>[Called By]<UL><LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PID_Calculate
+</UL>
+
+<P><STRONG><a name="[249]"></a>__ARM_isnanf</STRONG> (Thumb, 24 bytes, Stack size 4 bytes, pid.o(.text.__ARM_isnanf))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = __ARM_isnanf
+</UL>
+<BR>[Called By]<UL><LI><a href="#[247]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PID_ErrorHandle
+</UL>
+
+<P><STRONG><a name="[24a]"></a>__ARM_isinff</STRONG> (Thumb, 28 bytes, Stack size 4 bytes, pid.o(.text.__ARM_isinff))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = __ARM_isinff
+</UL>
+<BR>[Called By]<UL><LI><a href="#[247]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PID_ErrorHandle
 </UL>
 
 <P><STRONG><a name="[220]"></a>Kalman_Filter_Measurement_Update</STRONG> (Thumb, 72 bytes, Stack size 16 bytes, kalman_filter.o(.text.Kalman_Filter_Measurement_Update))
@@ -5018,39 +5051,6 @@ Local Symbols
 <LI><a href="#[21d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;arm_mat_mult_f32
 </UL>
 <BR>[Called By]<UL><LI><a href="#[224]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Kalman_Filter_Update
-</UL>
-
-<P><STRONG><a name="[b3]"></a>PID_Calc_Clear</STRONG> (Thumb, 38 bytes, Stack size 4 bytes, pid.o(.text.PID_Calc_Clear))
-<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = PID_Calc_Clear
-</UL>
-<BR>[Address Reference Count : 1]<UL><LI> pid.o(.text.PID_Init)
-</UL>
-<P><STRONG><a name="[b4]"></a>PID_Param_Init</STRONG> (Thumb, 164 bytes, Stack size 24 bytes, pid.o(.text.PID_Param_Init))
-<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = PID_Param_Init &rArr; LowPassFilter1p_Init
-</UL>
-<BR>[Calls]<UL><LI><a href="#[24b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LowPassFilter1p_Init
-</UL>
-<BR>[Address Reference Count : 1]<UL><LI> pid.o(.text.PID_Init)
-</UL>
-<P><STRONG><a name="[247]"></a>PID_ErrorHandle</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, pid.o(.text.PID_ErrorHandle))
-<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = PID_ErrorHandle &rArr; __ARM_isinff
-</UL>
-<BR>[Calls]<UL><LI><a href="#[24a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_isinff
-<LI><a href="#[249]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_isnanf
-</UL>
-<BR>[Called By]<UL><LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PID_Calculate
-</UL>
-
-<P><STRONG><a name="[249]"></a>__ARM_isnanf</STRONG> (Thumb, 24 bytes, Stack size 4 bytes, pid.o(.text.__ARM_isnanf))
-<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = __ARM_isnanf
-</UL>
-<BR>[Called By]<UL><LI><a href="#[247]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PID_ErrorHandle
-</UL>
-
-<P><STRONG><a name="[24a]"></a>__ARM_isinff</STRONG> (Thumb, 28 bytes, Stack size 4 bytes, pid.o(.text.__ARM_isinff))
-<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = __ARM_isinff
-</UL>
-<BR>[Called By]<UL><LI><a href="#[247]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PID_ErrorHandle
 </UL>
 
 <P><STRONG><a name="[b5]"></a>QuaternionEKF_A_Update</STRONG> (Thumb, 632 bytes, Stack size 16 bytes, quaternion.o(.text.QuaternionEKF_A_Update))

@@ -341,7 +341,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32H723xx,ARM_MATH_CM7,__FPU_PRESENT=1U,ARM_MATH_CHECK</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32H7xx_HAL_Driver/Inc;../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32H7xx/Include;../Drivers/CMSIS/Include;../Middlewares/ST/ARM/DSP/Inc;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;../SystemView/SEGGER;../SystemView/Sample/FreeRTOSV10;../SystemView/Config;../SystemView/SEGGER/Syscalls;../SystemView/Sample/FreeRTOSV10/Patch;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;../USB_DEVICE/App;../USB_DEVICE/Target;../Middlewares/ST/STM32_USB_Device_Library/Core/Inc;../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc;..\USER\Task\Inc;..\USER\Device\Inc;..\USER\BSP\Inc;..\USER\Algorithm\Inc</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32H7xx_HAL_Driver/Inc;../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32H7xx/Include;../Drivers/CMSIS/Include;../Middlewares/ST/ARM/DSP/Inc;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;../USB_DEVICE/App;../USB_DEVICE/Target;../Middlewares/ST/STM32_USB_Device_Library/Core/Inc;../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc;../Application/Task/Inc;../Components/Device/Inc;../Components/Controller/Inc;../Components/Algorithm/Inc;../BSP/Inc;../SystemView/SEGGER/Syscalls;../SystemView/Sample/FreeRTOSV10;../SystemView/Sample/FreeRTOSV10/Patch;../SystemView/Config;../SystemView/SEGGER</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -383,428 +383,157 @@
       </TargetOption>
       <Groups>
         <Group>
-          <GroupName>User/Task</GroupName>
-          <GroupOption>
-            <CommonProperty>
-              <UseCPPCompiler>0</UseCPPCompiler>
-              <RVCTCodeConst>10</RVCTCodeConst>
-              <RVCTZI>0</RVCTZI>
-              <RVCTOtherData>0</RVCTOtherData>
-              <ModuleSelection>0</ModuleSelection>
-              <IncludeInBuild>2</IncludeInBuild>
-              <AlwaysBuild>2</AlwaysBuild>
-              <GenerateAssemblyFile>2</GenerateAssemblyFile>
-              <AssembleAssemblyFile>2</AssembleAssemblyFile>
-              <PublicsOnly>2</PublicsOnly>
-              <StopOnExitCode>11</StopOnExitCode>
-              <CustomArgument></CustomArgument>
-              <IncludeLibraryModules></IncludeLibraryModules>
-              <ComprImg>1</ComprImg>
-            </CommonProperty>
-            <GroupArmAds>
-              <Cads>
-                <interw>2</interw>
-                <Optim>0</Optim>
-                <oTime>2</oTime>
-                <SplitLS>2</SplitLS>
-                <OneElfS>2</OneElfS>
-                <Strict>2</Strict>
-                <EnumInt>2</EnumInt>
-                <PlainCh>2</PlainCh>
-                <Ropi>2</Ropi>
-                <Rwpi>2</Rwpi>
-                <wLevel>0</wLevel>
-                <uThumb>2</uThumb>
-                <uSurpInc>2</uSurpInc>
-                <uC99>2</uC99>
-                <uGnu>2</uGnu>
-                <useXO>2</useXO>
-                <v6Lang>0</v6Lang>
-                <v6LangP>0</v6LangP>
-                <vShortEn>2</vShortEn>
-                <vShortWch>2</vShortWch>
-                <v6Lto>2</v6Lto>
-                <v6WtE>2</v6WtE>
-                <v6Rtti>2</v6Rtti>
-                <VariousControls>
-                  <MiscControls></MiscControls>
-                  <Define></Define>
-                  <Undefine></Undefine>
-                  <IncludePath></IncludePath>
-                </VariousControls>
-              </Cads>
-              <Aads>
-                <interw>2</interw>
-                <Ropi>2</Ropi>
-                <Rwpi>2</Rwpi>
-                <thumb>2</thumb>
-                <SplitLS>2</SplitLS>
-                <SwStkChk>2</SwStkChk>
-                <NoWarn>2</NoWarn>
-                <uSurpInc>2</uSurpInc>
-                <useXO>2</useXO>
-                <ClangAsOpt>0</ClangAsOpt>
-                <VariousControls>
-                  <MiscControls></MiscControls>
-                  <Define></Define>
-                  <Undefine></Undefine>
-                  <IncludePath></IncludePath>
-                </VariousControls>
-              </Aads>
-            </GroupArmAds>
-          </GroupOption>
+          <GroupName>Application/Task</GroupName>
           <Files>
             <File>
               <FileName>INS_Task.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\USER\Task\Src\INS_Task.c</FilePath>
+              <FilePath>..\Application\Task\Src\INS_Task.c</FilePath>
             </File>
             <File>
               <FileName>Control_Task.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\USER\Task\Src\Control_Task.c</FilePath>
+              <FilePath>..\Application\Task\Src\Control_Task.c</FilePath>
             </File>
             <File>
               <FileName>CAN_Task.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\USER\Task\Src\CAN_Task.c</FilePath>
+              <FilePath>..\Application\Task\Src\CAN_Task.c</FilePath>
             </File>
             <File>
               <FileName>Detect_Task.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\USER\Task\Src\Detect_Task.c</FilePath>
+              <FilePath>..\Application\Task\Src\Detect_Task.c</FilePath>
             </File>
             <File>
               <FileName>Config.h</FileName>
               <FileType>5</FileType>
-              <FilePath>..\USER\Task\Inc\Config.h</FilePath>
+              <FilePath>..\Application\Task\Inc\Config.h</FilePath>
             </File>
           </Files>
         </Group>
         <Group>
-          <GroupName>User/Device</GroupName>
-          <GroupOption>
-            <CommonProperty>
-              <UseCPPCompiler>0</UseCPPCompiler>
-              <RVCTCodeConst>10</RVCTCodeConst>
-              <RVCTZI>0</RVCTZI>
-              <RVCTOtherData>0</RVCTOtherData>
-              <ModuleSelection>0</ModuleSelection>
-              <IncludeInBuild>2</IncludeInBuild>
-              <AlwaysBuild>2</AlwaysBuild>
-              <GenerateAssemblyFile>2</GenerateAssemblyFile>
-              <AssembleAssemblyFile>2</AssembleAssemblyFile>
-              <PublicsOnly>2</PublicsOnly>
-              <StopOnExitCode>11</StopOnExitCode>
-              <CustomArgument></CustomArgument>
-              <IncludeLibraryModules></IncludeLibraryModules>
-              <ComprImg>1</ComprImg>
-            </CommonProperty>
-            <GroupArmAds>
-              <Cads>
-                <interw>2</interw>
-                <Optim>0</Optim>
-                <oTime>2</oTime>
-                <SplitLS>2</SplitLS>
-                <OneElfS>2</OneElfS>
-                <Strict>2</Strict>
-                <EnumInt>2</EnumInt>
-                <PlainCh>2</PlainCh>
-                <Ropi>2</Ropi>
-                <Rwpi>2</Rwpi>
-                <wLevel>0</wLevel>
-                <uThumb>2</uThumb>
-                <uSurpInc>2</uSurpInc>
-                <uC99>2</uC99>
-                <uGnu>2</uGnu>
-                <useXO>2</useXO>
-                <v6Lang>0</v6Lang>
-                <v6LangP>0</v6LangP>
-                <vShortEn>2</vShortEn>
-                <vShortWch>2</vShortWch>
-                <v6Lto>2</v6Lto>
-                <v6WtE>2</v6WtE>
-                <v6Rtti>2</v6Rtti>
-                <VariousControls>
-                  <MiscControls></MiscControls>
-                  <Define></Define>
-                  <Undefine></Undefine>
-                  <IncludePath></IncludePath>
-                </VariousControls>
-              </Cads>
-              <Aads>
-                <interw>2</interw>
-                <Ropi>2</Ropi>
-                <Rwpi>2</Rwpi>
-                <thumb>2</thumb>
-                <SplitLS>2</SplitLS>
-                <SwStkChk>2</SwStkChk>
-                <NoWarn>2</NoWarn>
-                <uSurpInc>2</uSurpInc>
-                <useXO>2</useXO>
-                <ClangAsOpt>0</ClangAsOpt>
-                <VariousControls>
-                  <MiscControls></MiscControls>
-                  <Define></Define>
-                  <Undefine></Undefine>
-                  <IncludePath></IncludePath>
-                </VariousControls>
-              </Aads>
-            </GroupArmAds>
-          </GroupOption>
+          <GroupName>Components/Device</GroupName>
           <Files>
             <File>
               <FileName>Motor.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\USER\Device\Src\Motor.c</FilePath>
+              <FilePath>..\Components\Device\Src\Motor.c</FilePath>
             </File>
             <File>
               <FileName>Remote_Control.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\USER\Device\Src\Remote_Control.c</FilePath>
+              <FilePath>..\Components\Device\Src\Remote_Control.c</FilePath>
             </File>
             <File>
               <FileName>Referee_System.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\USER\Device\Src\Referee_System.c</FilePath>
+              <FilePath>..\Components\Device\Src\Referee_System.c</FilePath>
             </File>
             <File>
               <FileName>MiniPC.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\USER\Device\Src\MiniPC.c</FilePath>
+              <FilePath>..\Components\Device\Src\MiniPC.c</FilePath>
             </File>
             <File>
               <FileName>Bmi088.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\USER\Device\Src\Bmi088.c</FilePath>
+              <FilePath>..\Components\Device\Src\Bmi088.c</FilePath>
             </File>
             <File>
               <FileName>Bmi088_Reg.h</FileName>
               <FileType>5</FileType>
-              <FilePath>..\USER\Device\Inc\Bmi088_Reg.h</FilePath>
+              <FilePath>..\Components\Device\Inc\Bmi088_Reg.h</FilePath>
             </File>
           </Files>
         </Group>
         <Group>
-          <GroupName>User/Bsp</GroupName>
-          <GroupOption>
-            <CommonProperty>
-              <UseCPPCompiler>0</UseCPPCompiler>
-              <RVCTCodeConst>10</RVCTCodeConst>
-              <RVCTZI>0</RVCTZI>
-              <RVCTOtherData>0</RVCTOtherData>
-              <ModuleSelection>0</ModuleSelection>
-              <IncludeInBuild>2</IncludeInBuild>
-              <AlwaysBuild>2</AlwaysBuild>
-              <GenerateAssemblyFile>2</GenerateAssemblyFile>
-              <AssembleAssemblyFile>2</AssembleAssemblyFile>
-              <PublicsOnly>2</PublicsOnly>
-              <StopOnExitCode>11</StopOnExitCode>
-              <CustomArgument></CustomArgument>
-              <IncludeLibraryModules></IncludeLibraryModules>
-              <ComprImg>1</ComprImg>
-            </CommonProperty>
-            <GroupArmAds>
-              <Cads>
-                <interw>2</interw>
-                <Optim>0</Optim>
-                <oTime>2</oTime>
-                <SplitLS>2</SplitLS>
-                <OneElfS>2</OneElfS>
-                <Strict>2</Strict>
-                <EnumInt>2</EnumInt>
-                <PlainCh>2</PlainCh>
-                <Ropi>2</Ropi>
-                <Rwpi>2</Rwpi>
-                <wLevel>0</wLevel>
-                <uThumb>2</uThumb>
-                <uSurpInc>2</uSurpInc>
-                <uC99>2</uC99>
-                <uGnu>2</uGnu>
-                <useXO>2</useXO>
-                <v6Lang>0</v6Lang>
-                <v6LangP>0</v6LangP>
-                <vShortEn>2</vShortEn>
-                <vShortWch>2</vShortWch>
-                <v6Lto>2</v6Lto>
-                <v6WtE>2</v6WtE>
-                <v6Rtti>2</v6Rtti>
-                <VariousControls>
-                  <MiscControls></MiscControls>
-                  <Define></Define>
-                  <Undefine></Undefine>
-                  <IncludePath></IncludePath>
-                </VariousControls>
-              </Cads>
-              <Aads>
-                <interw>2</interw>
-                <Ropi>2</Ropi>
-                <Rwpi>2</Rwpi>
-                <thumb>2</thumb>
-                <SplitLS>2</SplitLS>
-                <SwStkChk>2</SwStkChk>
-                <NoWarn>2</NoWarn>
-                <uSurpInc>2</uSurpInc>
-                <useXO>2</useXO>
-                <ClangAsOpt>0</ClangAsOpt>
-                <VariousControls>
-                  <MiscControls></MiscControls>
-                  <Define></Define>
-                  <Undefine></Undefine>
-                  <IncludePath></IncludePath>
-                </VariousControls>
-              </Aads>
-            </GroupArmAds>
-          </GroupOption>
+          <GroupName>BSP</GroupName>
           <Files>
-            <File>
-              <FileName>bsp_adc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\USER\BSP\Src\bsp_adc.c</FilePath>
-            </File>
             <File>
               <FileName>bsp_can.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\USER\BSP\Src\bsp_can.c</FilePath>
-            </File>
-            <File>
-              <FileName>bsp_gpio.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\USER\BSP\Src\bsp_gpio.c</FilePath>
-            </File>
-            <File>
-              <FileName>bsp_mcu.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\USER\BSP\Src\bsp_mcu.c</FilePath>
-            </File>
-            <File>
-              <FileName>bsp_pwm.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\USER\BSP\Src\bsp_pwm.c</FilePath>
-            </File>
-            <File>
-              <FileName>bsp_spi.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\USER\BSP\Src\bsp_spi.c</FilePath>
-            </File>
-            <File>
-              <FileName>bsp_tick.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\USER\BSP\Src\bsp_tick.c</FilePath>
+              <FilePath>..\BSP\Src\bsp_can.c</FilePath>
             </File>
             <File>
               <FileName>bsp_uart.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\USER\BSP\Src\bsp_uart.c</FilePath>
+              <FilePath>..\BSP\Src\bsp_uart.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_adc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\Src\bsp_adc.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_gpio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\Src\bsp_gpio.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_pwm.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\Src\bsp_pwm.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_spi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\Src\bsp_spi.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_tick.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\Src\bsp_tick.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_mcu.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\Src\bsp_mcu.c</FilePath>
             </File>
           </Files>
         </Group>
         <Group>
-          <GroupName>User/Algorithm</GroupName>
-          <GroupOption>
-            <CommonProperty>
-              <UseCPPCompiler>0</UseCPPCompiler>
-              <RVCTCodeConst>10</RVCTCodeConst>
-              <RVCTZI>0</RVCTZI>
-              <RVCTOtherData>0</RVCTOtherData>
-              <ModuleSelection>0</ModuleSelection>
-              <IncludeInBuild>2</IncludeInBuild>
-              <AlwaysBuild>2</AlwaysBuild>
-              <GenerateAssemblyFile>2</GenerateAssemblyFile>
-              <AssembleAssemblyFile>2</AssembleAssemblyFile>
-              <PublicsOnly>2</PublicsOnly>
-              <StopOnExitCode>11</StopOnExitCode>
-              <CustomArgument></CustomArgument>
-              <IncludeLibraryModules></IncludeLibraryModules>
-              <ComprImg>1</ComprImg>
-            </CommonProperty>
-            <GroupArmAds>
-              <Cads>
-                <interw>2</interw>
-                <Optim>0</Optim>
-                <oTime>2</oTime>
-                <SplitLS>2</SplitLS>
-                <OneElfS>2</OneElfS>
-                <Strict>2</Strict>
-                <EnumInt>2</EnumInt>
-                <PlainCh>2</PlainCh>
-                <Ropi>2</Ropi>
-                <Rwpi>2</Rwpi>
-                <wLevel>0</wLevel>
-                <uThumb>2</uThumb>
-                <uSurpInc>2</uSurpInc>
-                <uC99>2</uC99>
-                <uGnu>2</uGnu>
-                <useXO>2</useXO>
-                <v6Lang>0</v6Lang>
-                <v6LangP>0</v6LangP>
-                <vShortEn>2</vShortEn>
-                <vShortWch>2</vShortWch>
-                <v6Lto>2</v6Lto>
-                <v6WtE>2</v6WtE>
-                <v6Rtti>2</v6Rtti>
-                <VariousControls>
-                  <MiscControls></MiscControls>
-                  <Define></Define>
-                  <Undefine></Undefine>
-                  <IncludePath></IncludePath>
-                </VariousControls>
-              </Cads>
-              <Aads>
-                <interw>2</interw>
-                <Ropi>2</Ropi>
-                <Rwpi>2</Rwpi>
-                <thumb>2</thumb>
-                <SplitLS>2</SplitLS>
-                <SwStkChk>2</SwStkChk>
-                <NoWarn>2</NoWarn>
-                <uSurpInc>2</uSurpInc>
-                <useXO>2</useXO>
-                <ClangAsOpt>0</ClangAsOpt>
-                <VariousControls>
-                  <MiscControls></MiscControls>
-                  <Define></Define>
-                  <Undefine></Undefine>
-                  <IncludePath></IncludePath>
-                </VariousControls>
-              </Aads>
-            </GroupArmAds>
-          </GroupOption>
+          <GroupName>Components/Controller</GroupName>
           <Files>
-            <File>
-              <FileName>CRC.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\USER\Algorithm\Src\CRC.c</FilePath>
-            </File>
-            <File>
-              <FileName>Kalman_Filter.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\USER\Algorithm\Src\Kalman_Filter.c</FilePath>
-            </File>
-            <File>
-              <FileName>LPF.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\USER\Algorithm\Src\LPF.c</FilePath>
-            </File>
             <File>
               <FileName>PID.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\USER\Algorithm\Src\PID.c</FilePath>
+              <FilePath>..\Components\Controller\Src\PID.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Components/Algorithm</GroupName>
+          <Files>
+            <File>
+              <FileName>Kalman_Filter.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Components\Algorithm\Src\Kalman_Filter.c</FilePath>
             </File>
             <File>
               <FileName>Quaternion.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\USER\Algorithm\Src\Quaternion.c</FilePath>
+              <FilePath>..\Components\Algorithm\Src\Quaternion.c</FilePath>
+            </File>
+            <File>
+              <FileName>LPF.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Components\Algorithm\Src\LPF.c</FilePath>
             </File>
             <File>
               <FileName>Ramp.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\USER\Algorithm\Src\Ramp.c</FilePath>
+              <FilePath>..\Components\Algorithm\Src\Ramp.c</FilePath>
             </File>
             <File>
               <FileName>RLS.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\USER\Algorithm\Src\RLS.c</FilePath>
+              <FilePath>..\Components\Algorithm\Src\RLS.c</FilePath>
+            </File>
+            <File>
+              <FileName>CRC.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Components\Algorithm\Src\CRC.c</FilePath>
             </File>
           </Files>
         </Group>

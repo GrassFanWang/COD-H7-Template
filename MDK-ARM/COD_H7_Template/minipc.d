@@ -1,5 +1,5 @@
-cod_h7_template/minipc.o: ..\USER\Device\Src\MiniPC.c \
-  ..\USER\Device\Inc\MiniPC.h \
+cod_h7_template/minipc.o: ..\Components\Device\Src\MiniPC.c \
+  ..\Components\Device\Inc\MiniPC.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stdint.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stdbool.h \
   ..\USB_DEVICE\App\usbd_cdc_if.h \

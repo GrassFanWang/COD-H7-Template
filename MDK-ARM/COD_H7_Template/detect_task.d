@@ -1,4 +1,4 @@
-cod_h7_template/detect_task.o: ..\USER\Task\Src\Detect_Task.c \
+cod_h7_template/detect_task.o: ..\Application\Task\Src\Detect_Task.c \
   ..\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS\cmsis_os.h \
   ..\Middlewares\Third_Party\FreeRTOS\Source\include\FreeRTOS.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stddef.h \
@@ -22,11 +22,12 @@ cod_h7_template/detect_task.o: ..\USER\Task\Src\Detect_Task.c \
   ..\Middlewares\Third_Party\FreeRTOS\Source\include\queue.h \
   ..\Middlewares\Third_Party\FreeRTOS\Source\include\semphr.h \
   ..\Middlewares\Third_Party\FreeRTOS\Source\include\event_groups.h \
-  ..\USER\Task\Inc\Detect_Task.h ..\USER\Task\Inc\Control_Task.h \
+  ..\Application\Task\Inc\Detect_Task.h \
+  ..\Application\Task\Inc\Control_Task.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stdbool.h \
-  ..\USER\Device\Inc\Remote_Control.h \
+  ..\Components\Device\Inc\Remote_Control.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stdlib.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\string.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\math.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stdio.h \
-  ..\USER\BSP\Inc\bsp_gpio.h
+  ..\BSP\Inc\bsp_gpio.h

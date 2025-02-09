@@ -74,4 +74,4 @@ cod_h7_template/main.o: ..\Core\Src\main.c ..\Core\Inc\main.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stdio.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stdlib.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\string.h \
-  ..\Core\Inc\gpio.h ..\USER\BSP\Inc\bsp_mcu.h
+  ..\Core\Inc\gpio.h ..\BSP\Inc\bsp_mcu.h

@@ -1,0 +1,19 @@
+cod_h7_template/segger_sysview_config_freertos_1.o: \
+  ..\Application\SystemView\Sample\FreeRTOSV10\Config\Cortex-M\SEGGER_SYSVIEW_Config_FreeRTOS.c \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\FreeRTOS.h \
+  D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stddef.h \
+  D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stdint.h \
+  ..\Core\Inc\FreeRTOSConfig.h \
+  ..\Application\SystemView\Sample\FreeRTOSV10\SEGGER_SYSVIEW_FreeRTOS.h \
+  ..\Application\SystemView\SEGGER\SEGGER_SYSVIEW.h \
+  ..\Application\SystemView\SEGGER\SEGGER.h \
+  D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stdarg.h \
+  ..\Application\SystemView\Config\Global.h \
+  ..\Application\SystemView\SEGGER\SEGGER_SYSVIEW_ConfDefaults.h \
+  ..\Application\SystemView\Config\SEGGER_SYSVIEW_Conf.h \
+  ..\Application\SystemView\Config\SEGGER_RTT_Conf.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\projdefs.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\portable.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\deprecated_definitions.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\portable\RVDS\ARM_CM4F\portmacro.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\mpu_wrappers.h
