@@ -45,27 +45,6 @@ cod_h7_template/main.o: ..\Core\Src\main.c ..\Core\Inc\main.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_pcd.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_ll_usb.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_pcd_ex.h \
-  ..\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS\cmsis_os.h \
-  ..\Middlewares\Third_Party\FreeRTOS\Source\include\FreeRTOS.h \
-  ..\Core\Inc\FreeRTOSConfig.h \
-  ..\SystemView\Sample\FreeRTOSV10\SEGGER_SYSVIEW_FreeRTOS.h \
-  ..\SystemView\SEGGER\SEGGER_SYSVIEW.h ..\SystemView\SEGGER\SEGGER.h \
-  D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stdarg.h \
-  ..\SystemView\Config\Global.h \
-  ..\SystemView\SEGGER\SEGGER_SYSVIEW_ConfDefaults.h \
-  ..\SystemView\Config\SEGGER_SYSVIEW_Conf.h \
-  ..\SystemView\Config\SEGGER_RTT_Conf.h \
-  ..\Middlewares\Third_Party\FreeRTOS\Source\include\projdefs.h \
-  ..\Middlewares\Third_Party\FreeRTOS\Source\include\portable.h \
-  ..\Middlewares\Third_Party\FreeRTOS\Source\include\deprecated_definitions.h \
-  ..\Middlewares\Third_Party\FreeRTOS\Source\portable\RVDS\ARM_CM4F\portmacro.h \
-  ..\Middlewares\Third_Party\FreeRTOS\Source\include\mpu_wrappers.h \
-  ..\Middlewares\Third_Party\FreeRTOS\Source\include\task.h \
-  ..\Middlewares\Third_Party\FreeRTOS\Source\include\list.h \
-  ..\Middlewares\Third_Party\FreeRTOS\Source\include\timers.h \
-  ..\Middlewares\Third_Party\FreeRTOS\Source\include\queue.h \
-  ..\Middlewares\Third_Party\FreeRTOS\Source\include\semphr.h \
-  ..\Middlewares\Third_Party\FreeRTOS\Source\include\event_groups.h \
   ..\Core\Inc\adc.h ..\Core\Inc\bdma.h ..\Core\Inc\dma.h \
   ..\Core\Inc\fdcan.h ..\Core\Inc\memorymap.h ..\Core\Inc\spi.h \
   ..\Core\Inc\tim.h ..\Core\Inc\usart.h ..\USB_DEVICE\App\usb_device.h \
@@ -74,4 +53,4 @@ cod_h7_template/main.o: ..\Core\Src\main.c ..\Core\Inc\main.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stdio.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stdlib.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\string.h \
-  ..\Core\Inc\gpio.h ..\USER\BSP\Inc\bsp_mcu.h
+  ..\Core\Inc\gpio.h ..\BSP\Inc\bsp_mcu.h

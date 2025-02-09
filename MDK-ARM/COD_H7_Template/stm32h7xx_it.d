@@ -45,7 +45,7 @@ cod_h7_template/stm32h7xx_it.o: ..\Core\Src\stm32h7xx_it.c \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_pcd.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_ll_usb.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_pcd_ex.h \
-  ..\Core\Inc\stm32h7xx_it.h ..\USER\Device\Inc\remote_control.h \
+  ..\Core\Inc\stm32h7xx_it.h ..\Components\Device\Inc\remote_control.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stdbool.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stdlib.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\string.h \

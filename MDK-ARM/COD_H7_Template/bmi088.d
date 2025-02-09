@@ -1,8 +1,9 @@
-cod_h7_template/bmi088.o: ..\USER\Device\Src\Bmi088.c \
-  ..\USER\Device\Inc\Bmi088.h ..\USER\Device\Inc\bmi088_reg.h \
+cod_h7_template/bmi088.o: ..\Components\Device\Src\Bmi088.c \
+  ..\Components\Device\Inc\Bmi088.h \
+  ..\Components\Device\Inc\bmi088_reg.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stdint.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stdbool.h \
-  ..\USER\BSP\Inc\bsp_gpio.h ..\USER\BSP\Inc\bsp_spi.h \
+  ..\BSP\Inc\bsp_gpio.h ..\BSP\Inc\bsp_spi.h \
   ..\Drivers\CMSIS\Device\ST\STM32H7xx\Include\stm32h7xx.h \
   ..\Drivers\CMSIS\Device\ST\STM32H7xx\Include\stm32h723xx.h \
   ..\Drivers\CMSIS\Include\core_cm7.h \
@@ -48,4 +49,4 @@ cod_h7_template/bmi088.o: ..\USER\Device\Src\Bmi088.c \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_pcd.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_ll_usb.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_pcd_ex.h \
-  ..\USER\BSP\Inc\bsp_tick.h
+  ..\BSP\Inc\bsp_tick.h

@@ -1,4 +1,4 @@
-cod_h7_template/can_task.o: ..\USER\Task\Src\CAN_Task.c \
+cod_h7_template/can_task.o: ..\Application\Task\Src\CAN_Task.c \
   ..\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS\cmsis_os.h \
   ..\Middlewares\Third_Party\FreeRTOS\Source\include\FreeRTOS.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stddef.h \
@@ -22,10 +22,11 @@ cod_h7_template/can_task.o: ..\USER\Task\Src\CAN_Task.c \
   ..\Middlewares\Third_Party\FreeRTOS\Source\include\queue.h \
   ..\Middlewares\Third_Party\FreeRTOS\Source\include\semphr.h \
   ..\Middlewares\Third_Party\FreeRTOS\Source\include\event_groups.h \
-  ..\USER\Task\Inc\CAN_Task.h ..\USER\Task\Inc\Control_Task.h \
+  ..\Application\Task\Inc\CAN_Task.h \
+  ..\Application\Task\Inc\Control_Task.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stdbool.h \
-  ..\USER\Task\Inc\INS_Task.h ..\USER\Device\Inc\Motor.h \
-  ..\USER\Task\Inc\config.h \
+  ..\Application\Task\Inc\INS_Task.h ..\Components\Device\Inc\Motor.h \
+  ..\Application\Task\Inc\config.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stdlib.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\string.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\math.h \
@@ -38,7 +39,7 @@ cod_h7_template/can_task.o: ..\USER\Task\Src\CAN_Task.c \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
   ..\Drivers\CMSIS\Include\mpu_armv7.h \
   ..\Drivers\CMSIS\Device\ST\STM32H7xx\Include\system_stm32h7xx.h \
-  ..\USER\BSP\Inc\bsp_can.h \
+  ..\BSP\Inc\bsp_can.h \
   ..\Drivers\CMSIS\Device\ST\STM32H7xx\Include\stm32h7xx.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal.h \
   ..\Core\Inc\stm32h7xx_hal_conf.h \
@@ -73,5 +74,5 @@ cod_h7_template/can_task.o: ..\USER\Task\Src\CAN_Task.c \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_pcd.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_ll_usb.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_pcd_ex.h \
-  ..\USER\Device\Inc\Remote_Control.h \
+  ..\Components\Device\Inc\Remote_Control.h \
   D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stdio.h

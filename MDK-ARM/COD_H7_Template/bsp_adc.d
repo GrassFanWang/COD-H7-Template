@@ -1,5 +1,5 @@
-cod_h7_template/bsp_adc.o: ..\USER\BSP\Src\bsp_adc.c \
-  ..\USER\BSP\Inc\bsp_adc.h ..\Core\Inc\adc.h ..\Core\Inc\main.h \
+cod_h7_template/bsp_adc.o: ..\BSP\Src\bsp_adc.c ..\BSP\Inc\bsp_adc.h \
+  ..\Core\Inc\adc.h ..\Core\Inc\main.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal.h \
   ..\Core\Inc\stm32h7xx_hal_conf.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_rcc.h \

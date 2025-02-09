@@ -1,5 +1,4 @@
-cod_h7_template/bsp_spi.o: ..\USER\BSP\Src\bsp_spi.c \
-  ..\USER\BSP\Inc\bsp_spi.h \
+cod_h7_template/bsp_spi.o: ..\BSP\Src\bsp_spi.c ..\BSP\Inc\bsp_spi.h \
   ..\Drivers\CMSIS\Device\ST\STM32H7xx\Include\stm32h7xx.h \
   ..\Drivers\CMSIS\Device\ST\STM32H7xx\Include\stm32h723xx.h \
   ..\Drivers\CMSIS\Include\core_cm7.h \

@@ -54,6 +54,4 @@ cod_h7_template/usbd_cdc_if.o: ..\USB_DEVICE\App\usbd_cdc_if.c \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_ll_usb.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_pcd_ex.h \
   ..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_core.h \
-  ..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_ctlreq.h \
-  ..\USER\Device\Inc\MiniPC.h \
-  D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stdbool.h
+  ..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_ctlreq.h
