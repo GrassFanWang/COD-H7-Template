@@ -16,6 +16,7 @@
 "cod_h7_template\bsp_spi.o"
 "cod_h7_template\bsp_tick.o"
 "cod_h7_template\bsp_mcu.o"
+"cod_h7_template\bsp_dwt.o"
 "cod_h7_template\pid.o"
 "cod_h7_template\kalman_filter.o"
 "cod_h7_template\quaternion.o"

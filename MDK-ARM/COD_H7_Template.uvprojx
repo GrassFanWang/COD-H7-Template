@@ -490,6 +490,11 @@
               <FileType>1</FileType>
               <FilePath>..\BSP\Src\bsp_mcu.c</FilePath>
             </File>
+            <File>
+              <FileName>bsp_dwt.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\Src\bsp_dwt.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
