@@ -21,7 +21,7 @@
 /**
  * @brief Referee_System_Info_RxDMA MultiBuffer
  */
-uint8_t Referee_System_Info_MultiRx_Buf[2][REFEREE_RXFRAME_LENGTH];
+__attribute__((section (".AXI_SRAM"))) uint8_t Referee_System_Info_MultiRx_Buf[2][REFEREE_RXFRAME_LENGTH];
 
 /**
  * @brief Referee structure variable
