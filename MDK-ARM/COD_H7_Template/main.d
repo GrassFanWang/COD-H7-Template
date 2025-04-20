@@ -6,17 +6,8 @@ cod_h7_template/main.o: ..\Core\Src\main.c ..\Core\Inc\main.h \
   ..\Drivers\CMSIS\Device\ST\STM32H7xx\Include\stm32h7xx.h \
   ..\Drivers\CMSIS\Device\ST\STM32H7xx\Include\stm32h723xx.h \
   ..\Drivers\CMSIS\Include\core_cm7.h \
-  D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stdint.h \
-  ..\Drivers\CMSIS\Include\cmsis_version.h \
-  ..\Drivers\CMSIS\Include\cmsis_compiler.h \
-  ..\Drivers\CMSIS\Include\cmsis_armclang.h \
-  D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
-  D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
-  ..\Drivers\CMSIS\Include\mpu_armv7.h \
   ..\Drivers\CMSIS\Device\ST\STM32H7xx\Include\system_stm32h7xx.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h \
-  D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stddef.h \
-  D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\math.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_rcc_ex.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_gpio.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_gpio_ex.h \
@@ -50,7 +41,6 @@ cod_h7_template/main.o: ..\Core\Src\main.c ..\Core\Inc\main.h \
   ..\Core\Inc\FreeRTOSConfig.h \
   ..\SystemView\Sample\FreeRTOSV10\SEGGER_SYSVIEW_FreeRTOS.h \
   ..\SystemView\SEGGER\SEGGER_SYSVIEW.h ..\SystemView\SEGGER\SEGGER.h \
-  D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stdarg.h \
   ..\SystemView\Config\Global.h \
   ..\SystemView\SEGGER\SEGGER_SYSVIEW_ConfDefaults.h \
   ..\SystemView\Config\SEGGER_SYSVIEW_Conf.h \
@@ -70,8 +60,5 @@ cod_h7_template/main.o: ..\Core\Src\main.c ..\Core\Inc\main.h \
   ..\Core\Inc\fdcan.h ..\Core\Inc\memorymap.h ..\Core\Inc\spi.h \
   ..\Core\Inc\tim.h ..\Core\Inc\usart.h ..\USB_DEVICE\App\usb_device.h \
   ..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_def.h \
-  ..\USB_DEVICE\Target\usbd_conf.h \
-  D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stdio.h \
-  D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stdlib.h \
-  D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\string.h \
-  ..\Core\Inc\gpio.h ..\BSP\Inc\bsp_mcu.h
+  ..\USB_DEVICE\Target\usbd_conf.h ..\Core\Inc\gpio.h \
+  ..\BSP\Inc\bsp_mcu.h

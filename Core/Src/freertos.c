@@ -49,16 +49,16 @@
 
 /* USER CODE END Variables */
 osThreadId Start_INS_TaskHandle;
-uint32_t Start_INS_TaskBuffer[ 1024 ];
+uint32_t Start_INS_TaskBuffer[ 2048 ];
 osStaticThreadDef_t Start_INS_TaskControlBlock;
 osThreadId Start_Control_TaskHandle;
-uint32_t Start_Control_TaskBuffer[ 1024 ];
+uint32_t Start_Control_TaskBuffer[ 2048 ];
 osStaticThreadDef_t Start_Control_TaskControlBlock;
 osThreadId Start_CAN_TaskHandle;
-uint32_t Start_CAN_TaskBuffer[ 1024 ];
+uint32_t Start_CAN_TaskBuffer[ 2048 ];
 osStaticThreadDef_t Start_CAN_TaskControlBlock;
 osThreadId Start_Detect_TaskHandle;
-uint32_t Start_Detect_TaskBuffer[ 1024 ];
+uint32_t Start_Detect_TaskBuffer[ 2048 ];
 osStaticThreadDef_t Start_Detect_TaskControlBlock;
 
 /* Private function prototypes -----------------------------------------------*/
@@ -118,19 +118,19 @@ void MX_FREERTOS_Init(void) {
 
   /* Create the thread(s) */
   /* definition and creation of Start_INS_Task */
-  osThreadStaticDef(Start_INS_Task, INS_Task, osPriorityHigh, 0, 1024, Start_INS_TaskBuffer, &Start_INS_TaskControlBlock);
+  osThreadStaticDef(Start_INS_Task, INS_Task, osPriorityHigh, 0, 2048, Start_INS_TaskBuffer, &Start_INS_TaskControlBlock);
   Start_INS_TaskHandle = osThreadCreate(osThread(Start_INS_Task), NULL);
 
   /* definition and creation of Start_Control_Task */
-  osThreadStaticDef(Start_Control_Task, Control_Task, osPriorityAboveNormal, 0, 1024, Start_Control_TaskBuffer, &Start_Control_TaskControlBlock);
+  osThreadStaticDef(Start_Control_Task, Control_Task, osPriorityAboveNormal, 0, 2048, Start_Control_TaskBuffer, &Start_Control_TaskControlBlock);
   Start_Control_TaskHandle = osThreadCreate(osThread(Start_Control_Task), NULL);
 
   /* definition and creation of Start_CAN_Task */
-  osThreadStaticDef(Start_CAN_Task, CAN_Task, osPriorityNormal, 0, 1024, Start_CAN_TaskBuffer, &Start_CAN_TaskControlBlock);
+  osThreadStaticDef(Start_CAN_Task, CAN_Task, osPriorityNormal, 0, 2048, Start_CAN_TaskBuffer, &Start_CAN_TaskControlBlock);
   Start_CAN_TaskHandle = osThreadCreate(osThread(Start_CAN_Task), NULL);
 
   /* definition and creation of Start_Detect_Task */
-  osThreadStaticDef(Start_Detect_Task, Detect_Task, osPriorityBelowNormal, 0, 1024, Start_Detect_TaskBuffer, &Start_Detect_TaskControlBlock);
+  osThreadStaticDef(Start_Detect_Task, Detect_Task, osPriorityBelowNormal, 0, 2048, Start_Detect_TaskBuffer, &Start_Detect_TaskControlBlock);
   Start_Detect_TaskHandle = osThreadCreate(osThread(Start_Detect_Task), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */

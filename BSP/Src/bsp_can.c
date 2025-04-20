@@ -79,42 +79,43 @@ void BSP_FDCAN_Init(void){
 
   FDCAN_FilterTypeDef FDCAN1_FilterConfig;
 	
-	FDCAN1_FilterConfig.IdType = FDCAN_STANDARD_ID; // ¹ýÂËIDÀàÐÍÑ¡Ôñ ±ê×¼ID
-  FDCAN1_FilterConfig.FilterIndex = 0;           //µ±Ç°FDCAN¹ýÂËÆ÷±àºÅ£¬¿ÉÒÔÉèÖÃ¶à¸ö¹ýÂËÆ÷¹ýÂË²»Í¬µÄID ÒÀ´ÎÀàÍÆ0¡¢1¡¢2....
-  FDCAN1_FilterConfig.FilterType = FDCAN_FILTER_MASK; //¹ýÂËÆ÷MaskÄ£Ê½ ¹Øºõµ½ÏÂÃæID1¡¢ID2µÄÅäÖÃ
-  FDCAN1_FilterConfig.FilterConfig = FDCAN_FILTER_TO_RXFIFO0;//Ñ¡ÔñÄÄ¸öFIFOÇø½ÓÊÕ£¬¸ù¾ÝCubeMXµÄÅäÖÃÀ´£¬FIFO1¾Í¸Ä³ÉFDCAN_FILTER_TO_RXFIFO1
-  FDCAN1_FilterConfig.FilterID1 = 0x00000000; // Õâ¸ö¶¼ÐÐ£¬Ö»ÒªID2ÅäÖÃ0x00000000¾Í²»»á¹ýÂËµ÷ÈÎºÎID
-  FDCAN1_FilterConfig.FilterID2 = 0x00000000; //ÀíÓÉÈçÉÏ
+	FDCAN1_FilterConfig.IdType = FDCAN_STANDARD_ID; // ï¿½ï¿½ï¿½ï¿½IDï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ ï¿½ï¿½×¼ID
+  FDCAN1_FilterConfig.FilterIndex = 0;           //ï¿½ï¿½Ç°FDCANï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë²ï¿½Í¬ï¿½ï¿½ID ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½0ï¿½ï¿½1ï¿½ï¿½2....
+  FDCAN1_FilterConfig.FilterType = FDCAN_FILTER_MASK; //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½MaskÄ£Ê½ ï¿½Øºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ID1ï¿½ï¿½ID2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+  FDCAN1_FilterConfig.FilterConfig = FDCAN_FILTER_TO_RXFIFO0;//Ñ¡ï¿½ï¿½ï¿½Ä¸ï¿½FIFOï¿½ï¿½ï¿½ï¿½ï¿½Õ£ï¿½ï¿½ï¿½ï¿½ï¿½CubeMXï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½FIFO1ï¿½Í¸Ä³ï¿½FDCAN_FILTER_TO_RXFIFO1
+  FDCAN1_FilterConfig.FilterID1 = 0x00000000; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð£ï¿½Ö»ÒªID2ï¿½ï¿½ï¿½ï¿½0x00000000ï¿½Í²ï¿½ï¿½ï¿½ï¿½ï¿½Ëµï¿½ï¿½Îºï¿½ID
+  FDCAN1_FilterConfig.FilterID2 = 0x00000000; //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
   
-  HAL_FDCAN_ConfigFilter(&hfdcan1, &FDCAN1_FilterConfig); //½«ÉÏÊöÅäÖÃµ½CAN1
+  HAL_FDCAN_ConfigFilter(&hfdcan1, &FDCAN1_FilterConfig); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ãµï¿½CAN1
 		
-  HAL_FDCAN_ConfigGlobalFilter(&hfdcan1, FDCAN_REJECT, FDCAN_REJECT, FDCAN_FILTER_REMOTE, FDCAN_FILTER_REMOTE); //¿ªÆôCAN1µÄÈ«¾Ö¹ýÂË£¬¾ÍÊÇ¿ªÆô¹ýÂËÆ÷
+  HAL_FDCAN_ConfigGlobalFilter(&hfdcan1, FDCAN_REJECT, FDCAN_REJECT, FDCAN_FILTER_REMOTE, FDCAN_FILTER_REMOTE); //ï¿½ï¿½ï¿½ï¿½CAN1ï¿½ï¿½È«ï¿½Ö¹ï¿½ï¿½Ë£ï¿½ï¿½ï¿½ï¿½Ç¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  
-  HAL_FDCAN_ActivateNotification(&hfdcan1, FDCAN_IT_RX_FIFO0_NEW_MESSAGE, 0);//´ò¿ªFIFO0ÇøµÄÐÂÊý¾Ý½ÓÊÕÖÐ¶Ï
+  HAL_FDCAN_ActivateNotification(&hfdcan1, FDCAN_IT_RX_FIFO0_NEW_MESSAGE, 0);//ï¿½ï¿½FIFO0ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½
   
-  HAL_FDCAN_Start(&hfdcan1);//Ê¹ÄÜCAN1
+  HAL_FDCAN_Start(&hfdcan1);//Ê¹ï¿½ï¿½CAN1
  	
 	
-	FDCAN_FilterTypeDef FDCAN2_FilterConfig;
+	FDCAN_FilterTypeDef FDCAN2_FilterConfig;//FDCAN2è¿‡æ»¤å™¨ç»“æž„ä½“
 	
-	FDCAN2_FilterConfig.IdType = FDCAN_STANDARD_ID;
-  FDCAN2_FilterConfig.FilterIndex = 0;
-  FDCAN2_FilterConfig.FilterType = FDCAN_FILTER_MASK;
-  FDCAN2_FilterConfig.FilterConfig = FDCAN_FILTER_TO_RXFIFO1;
-  FDCAN2_FilterConfig.FilterID1 = 0x00000000; 
-  FDCAN2_FilterConfig.FilterID2 = 0x00000000; 
+  FDCAN2_FilterConfig.IdType = FDCAN_STANDARD_ID;//è¿‡æ»¤å™¨è¿‡æ»¤IDç±»åž‹
+  FDCAN2_FilterConfig.FilterIndex = 0;//è¿‡æ»¤å™¨ç¼–å·0
+  FDCAN2_FilterConfig.FilterType = FDCAN_FILTER_MASK;//è¿‡æ»¤å™¨ç±»åž‹ï¼šç»å…¸ä½å±è”½è¿‡æ»¤å™¨
+  FDCAN2_FilterConfig.FilterConfig = FDCAN_FILTER_TO_RXFIFO1;//è¿‡æ»¤åŽè¿›å…¥FIFO1åŒº
+  FDCAN2_FilterConfig.FilterID1 = 0x00000000; //æ¶ˆæ¯IDè¿‡æ»¤å™¨
+  FDCAN2_FilterConfig.FilterID2 = 0x00000000; //è¿‡æ»¤å™¨å±è”½ æ¯ä¸ªä½å‡è®¾ç½®0ï¼Œå³ä¸è¿‡æ»¤ä»»ä½•ID
   
-	HAL_FDCAN_ConfigFilter(&hfdcan2, &FDCAN2_FilterConfig);
+	HAL_FDCAN_ConfigFilter(&hfdcan2, &FDCAN2_FilterConfig);//æ ¹æ®è¿‡æ»¤å™¨ç»“æž„ä½“ä¸­æŒ‡å®šçš„å‚æ•°é…ç½®FDCANæŽ¥æ”¶è¿‡æ»¤å™¨
 
+  //é…ç½® FDCAN å…¨å±€è¿‡æ»¤å™¨
   HAL_FDCAN_ConfigGlobalFilter(&hfdcan2, FDCAN_REJECT, FDCAN_REJECT, FDCAN_FILTER_REMOTE, FDCAN_FILTER_REMOTE);
+  
+  HAL_FDCAN_ActivateNotification(&hfdcan2, FDCAN_IT_RX_FIFO1_NEW_MESSAGE, 0);//ä½¿èƒ½ä¸­æ–­ï¼ŒFIFO1æ–°æ¶ˆæ¯ä¸­æ–­
 
-  HAL_FDCAN_ActivateNotification(&hfdcan2, FDCAN_IT_RX_FIFO1_NEW_MESSAGE, 0);
-
-  HAL_FDCAN_EnableTxDelayCompensation(&hfdcan2);//¿ªÆôFDCANµÄ·¢ËÍÑÓ³Ù²¹³¥
+  HAL_FDCAN_EnableTxDelayCompensation(&hfdcan2);//ä½¿èƒ½FDCANå‘é€å»¶æ—¶è¡¥å¿
  
-  HAL_FDCAN_ConfigTxDelayCompensation(&hfdcan2,14,14);//ÉèÖÃ²¹³¥Ê±¼ä ²ÎÊý2ºÍ²ÎÊý3¶¼ÎªTimeSeg1µÄÖµ
+  HAL_FDCAN_ConfigTxDelayCompensation(&hfdcan2,14,14);//FDCANå‘é€å»¶æ—¶è¡¥å¿æ—¶é—´è®¾ç½®
 
-  HAL_FDCAN_Start(&hfdcan2);
+  HAL_FDCAN_Start(&hfdcan2);//FDCANå¼€å§‹å·¥ä½œ
 	
 	
 	FDCAN_FilterTypeDef FDCAN3_FilterConfig;

@@ -19,6 +19,7 @@
 #include "Remote_Control.h"
 #include "PID.h"
 #include "Motor.h"
+#include "arm_math.h"
 
 static void Control_Init(Control_Info_Typedef *Control_Info);
 static void Control_Measure_Update(Control_Info_Typedef *Control_Info);
@@ -80,5 +81,12 @@ static void Control_Info_Update(Control_Info_Typedef *Control_Info){
 	
 }
 
+static float FivePower(float NowTime,float UseTime){
+     
+	  float Time = (NowTime/UseTime);
+	     
+    return 10*powf(Time,3) - 15*powf(Time,4) + 6*powf(Time,5);
 
+
+}
 	

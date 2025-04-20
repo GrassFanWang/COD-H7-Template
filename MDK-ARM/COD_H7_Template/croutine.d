@@ -1,12 +1,9 @@
 cod_h7_template/croutine.o: \
   ..\Middlewares\Third_Party\FreeRTOS\Source\croutine.c \
   ..\Middlewares\Third_Party\FreeRTOS\Source\include\FreeRTOS.h \
-  D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stddef.h \
-  D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stdint.h \
   ..\Core\Inc\FreeRTOSConfig.h \
   ..\SystemView\Sample\FreeRTOSV10\SEGGER_SYSVIEW_FreeRTOS.h \
   ..\SystemView\SEGGER\SEGGER_SYSVIEW.h ..\SystemView\SEGGER\SEGGER.h \
-  D:\STM32Pro\MDK5\Core\ARM\ARMCLANG\Bin\..\include\stdarg.h \
   ..\SystemView\Config\Global.h \
   ..\SystemView\SEGGER\SEGGER_SYSVIEW_ConfDefaults.h \
   ..\SystemView\Config\SEGGER_SYSVIEW_Conf.h \

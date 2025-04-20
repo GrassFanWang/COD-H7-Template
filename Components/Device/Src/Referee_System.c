@@ -21,12 +21,12 @@
 /**
  * @brief Referee_System_Info_RxDMA MultiBuffer
  */
-uint8_t Referee_System_Info_MultiRx_Buf[2][REFEREE_RXFRAME_LENGTH];
-
+__attribute__((section (".AXI_SRAM"))) uint8_t Referee_System_Info_MultiRx_Buf[2][REFEREE_RXFRAME_LENGTH];
 /**
  * @brief Referee structure variable
  */
 Referee_System_Info_TypeDef Referee_System_Info;
+
 /* Private function prototypes -----------------------------------------------*/
 static uint32_t bit8TObit32(uint8_t change_info[4]);
 static uint32_t bit8TObit64(uint8_t change_info[8]);
@@ -34,8 +34,8 @@ static float    bit8TOfloat32(uint8_t change_info[4]);
 static uint8_t bit32TObit8(uint8_t Index_need,uint32_t bit32);
 static int16_t bit8TObit16(uint8_t change_info[2]);
 static uint8_t bit16TObit8(uint8_t Index_need,int16_t bit16);
-static void Referee_System_Info_Update(uint8_t *Buff,Referee_System_Info_TypeDef *Referee_System_Info);
 
+static void Referee_System_Info_Update(uint8_t *Buff,Referee_System_Info_TypeDef *Referee_System_Info);
 /**
   * @brief  Check if the referee system receives data correctly 
   * @param  *Buff: pointer to a array that contains the information of the received message
@@ -59,7 +59,6 @@ void Referee_System_Frame_Update(uint8_t *Buff)
       {
 				/*Update the referee system data*/
         Referee_System_Info_Update(Buff,&Referee_System_Info);
-      
 			}
     
 		}else{
@@ -98,8 +97,8 @@ static void Referee_System_Info_Update(uint8_t *Buff,Referee_System_Info_TypeDef
 		break;
 #endif
 
-	#ifdef GAME_ROBOTHP_ID
-    case GAME_ROBOTHP_ID:
+	#ifdef GAME_ROBOT_HP_ID
+    case GAME_ROBOT_HP_ID:
 				Referee_System_Info->game_robot_HP.red_1_robot_HP = bit8TObit16(&Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length]);
 				Referee_System_Info->game_robot_HP.red_2_robot_HP = bit8TObit16(&Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length + 2]);
 				Referee_System_Info->game_robot_HP.red_3_robot_HP = bit8TObit16(&Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length + 4]);
@@ -118,8 +117,8 @@ static void Referee_System_Info_Update(uint8_t *Buff,Referee_System_Info_TypeDef
     break;
 #endif
 
-#ifdef EVENE_DATA_ID
-    case EVENE_DATA_ID:
+#ifdef EVENET_DATA_ID
+    case EVENET_DATA_ID:
         Referee_System_Info->event_data.event_data = bit8TObit32(&Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length]);
     break;
 #endif
@@ -154,8 +153,8 @@ static void Referee_System_Info_Update(uint8_t *Buff,Referee_System_Info_TypeDef
     break;
 #endif
 
-#ifdef POWER_HEAT_ID
-    case POWER_HEAT_ID:
+#ifdef POWER_HEAT_DATA_ID
+    case POWER_HEAT_DATA_ID:
 				Referee_System_Info->power_heat_data.buffer_energy      = bit8TObit16(&Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length + 8]);
 				Referee_System_Info->power_heat_data.shooter_17mm_1_barrel_heat = bit8TObit16(&Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length + 10]);
 				Referee_System_Info->power_heat_data.shooter_17mm_2_barrel_heat = bit8TObit16(&Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length + 12]);
@@ -163,27 +162,28 @@ static void Referee_System_Info_Update(uint8_t *Buff,Referee_System_Info_TypeDef
     break;
 #endif
 
-#ifdef ROBOT_POSITION_ID
-    case ROBOT_POSITION_ID:
+#ifdef ROBOT_POS_ID
+    case ROBOT_POS_ID:
 				Referee_System_Info->robot_pos.x     = bit8TOfloat32(&Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length]);
 				Referee_System_Info->robot_pos.y     = bit8TOfloat32(&Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length + 4]);
 				Referee_System_Info->robot_pos.angle = bit8TOfloat32(&Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length + 8]);
     break;
 #endif
 
-#ifdef ROBOT_BUFF_ID
-    case ROBOT_BUFF_ID:
+#ifdef BUFF_ID
+    case BUFF_ID:
 				Referee_System_Info->buff.recovery_buff = Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length];
 				Referee_System_Info->buff.cooling_buff  = Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length + 1];
 				Referee_System_Info->buff.defence_buff  = Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length + 2];
 				Referee_System_Info->buff.vulnerability_buff  = Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length + 3];
 				Referee_System_Info->buff.attack_buff = bit8TObit16 (&Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length + 4]);
 				Referee_System_Info->buff.remaining_energy = Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length + 5];
+		
     break;
 #endif
 
-#ifdef ROBOT_HURT_ID
-    case ROBOT_HURT_ID:
+#ifdef HURT_DATA_ID
+    case HURT_DATA_ID:
       Referee_System_Info->hurt_data.armor_id  = Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length] & 0x0F ;
       Referee_System_Info->hurt_data.HP_deduction_reason = (Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length] & 0xF0) >>4;
     break;
@@ -237,7 +237,6 @@ static void Referee_System_Info_Update(uint8_t *Buff,Referee_System_Info_TypeDef
 #ifdef RADAR_MARAKING_DATA_ID
 	 case RADAR_MARAKING_DATA_ID :
      Referee_System_Info->radar_mark_data.mark_progress = Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length];
-     
    break;
 #endif
 	
@@ -245,16 +244,83 @@ static void Referee_System_Info_Update(uint8_t *Buff,Referee_System_Info_TypeDef
 	 case SENTRY_INFO_ID:
 		 Referee_System_Info->sentry_info.sentry_info   = bit8TObit32(&Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length]);
 	   Referee_System_Info->sentry_info.sentry_info_2 = bit8TObit16(&Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length + 4]);
-	   
 	 break;
 #endif
+	 
 #ifdef RADAR_INFO_ID
 	 case RADAR_INFO_ID:
 		 Referee_System_Info->radar_info.radar_info = Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length];
 	 break;
 #endif	 
+
+#ifdef ROBOT_INTERACTION_DATA_ID
+   case ROBOT_INTERACTION_DATA_ID:
+		  Referee_System_Info->robot_interaction_data.data_cmd_id = bit8TObit16(&Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length]);
+	    Referee_System_Info->robot_interaction_data.sender_id   = bit8TObit16(&Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length + 2]);
+	    Referee_System_Info->robot_interaction_data.receiver_id = bit8TObit16(&Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length + 4]);
+	    for(uint8_t i = 0; i< 112; i++){
+			Referee_System_Info->robot_interaction_data.user_data[i] =	Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length + 5 + i];
+			}
+#endif	 
+
+#ifdef MAP_COMMAND_ID
+ 	 case	MAP_COMMAND_ID:
+  		Referee_System_Info->map_command.target_position_x = bit8TOfloat32(&Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length]); 
+			Referee_System_Info->map_command.target_position_y = bit8TOfloat32(&Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length + 4]); 
+      Referee_System_Info->map_command.cmd_keyboard      = Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length + 8];
+	    Referee_System_Info->map_command.target_robot_id   = Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length + 9];
+	    Referee_System_Info->map_command.cmd_source        = Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length + 10];
+#endif	 
+
+#ifdef MAP_ROBOT_DATA_ID
+	    Referee_System_Info->map_robot_data.hero_position_x       = bit8TObit16(&Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length]);
+	    Referee_System_Info->map_robot_data.hero_position_y       = bit8TObit16(&Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length + 2]);
+	    Referee_System_Info->map_robot_data.engineer_position_x   = bit8TObit16(&Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length + 4]);
+	   	Referee_System_Info->map_robot_data.engineer_position_y   = bit8TObit16(&Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length + 6]);
+      Referee_System_Info->map_robot_data.infantry_3_position_x = bit8TObit16(&Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length + 8]);
+	    Referee_System_Info->map_robot_data.infantry_3_position_y = bit8TObit16(&Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length + 10]);
+	    Referee_System_Info->map_robot_data.infantry_4_position_x = bit8TObit16(&Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length + 12]);
+	   	Referee_System_Info->map_robot_data.infantry_4_position_y = bit8TObit16(&Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length + 14]);
+	    Referee_System_Info->map_robot_data.infantry_5_position_x = bit8TObit16(&Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length + 16]);
+	   	Referee_System_Info->map_robot_data.infantry_5_position_y = bit8TObit16(&Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length + 18]);
+	    Referee_System_Info->map_robot_data.sentry_position_x     = bit8TObit16(&Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length + 20]);
+	   	Referee_System_Info->map_robot_data.sentry_position_y     = bit8TObit16(&Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length + 22]);
+#endif	 
 	 
-    default:break;
+#ifdef MAP_DATA_ID
+      Referee_System_Info->map_data.intention = Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length];
+      Referee_System_Info->map_data.start_position_x = bit8TObit16(&Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length + 1]);
+      Referee_System_Info->map_data.start_position_y = bit8TObit16(&Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length + 3]);
+      for(uint8_t i = 0;i < 49; i++){
+			Referee_System_Info->map_data.delta_x[i] = Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length + 5 + i];
+      }
+			for(uint8_t i = 0;i < 49; i++){
+      Referee_System_Info->map_data.delta_y[i] = Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length + 54 + i];      
+		  }
+			Referee_System_Info->map_data.sender_id = bit8TObit16(&Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length + 103]);
+#endif
+
+#ifdef MAP_DATA_ID
+      Referee_System_Info->map_data.intention = Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length];
+      Referee_System_Info->map_data.start_position_x = bit8TObit16(&Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length + 1]);
+      Referee_System_Info->map_data.start_position_y = bit8TObit16(&Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length + 3]);
+      for(uint8_t i = 0;i < 49; i++){
+			Referee_System_Info->map_data.delta_x[i] = Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length + 5 + i];
+      }
+			for(uint8_t i = 0;i < 49; i++){
+      Referee_System_Info->map_data.delta_y[i] = Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length + 54 + i];      
+		  }
+			Referee_System_Info->map_data.sender_id  = bit8TObit16(&Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length + 103]);
+#endif
+
+#ifdef CUSTOM_INFO_ID
+      Referee_System_Info->custom_info.sender_id   = bit8TObit16(&Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length]);
+			Referee_System_Info->custom_info.receiver_id = bit8TObit16(&Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length + 2]);
+			for(uint8_t i = 0;i < 30; i++){
+			Referee_System_Info->custom_info.user_data[i] = Buff[Referee_System_Info->Index + FrameHeader_Length + CMDID_Length + 4 + i];
+      }
+#endif 			
+			default:break;
   }
 }
 
@@ -362,8 +428,3 @@ static uint8_t bit16TObit8(uint8_t Index_need,int16_t bit16)
 	return u16val.byte[Index_need];
 }
 //------------------------------------------------------------------------------
-
-
-
-
-
